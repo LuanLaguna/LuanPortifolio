@@ -246,10 +246,12 @@ h1{
 
 /* Mobile */
 @media (max-width: 860px){
-  .wix-hero{
-    grid-template-columns: 1fr;
-    gap: 26px;
-  }
+.wix-hero {
+  display: flex;
+  align-items: flex-start;
+  gap: 100px;
+  padding: 80px 0;
+}
 .wix-photo img {
   width: 380px;
   height: 480px;
