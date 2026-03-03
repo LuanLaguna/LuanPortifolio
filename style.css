@@ -12,17 +12,15 @@
 body{
   margin:0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  body {
-  font-family: 'Inter', sans-serif;
-}
   background:var(--bg);
   color:var(--text);
   line-height:1.6;
 }
 
 .container{
-  width:min(980px, 92%);
-  margin:0 auto;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 16px;   /* mais próximo das bordas */
 }
 
 .nav{
@@ -161,28 +159,12 @@ h1{
   line-height: 1.6;
 }
 .wix-hero{
-  padding: 56px 0 40px;
+  padding: 56px 0 44px;
   display: grid;
-  grid-template-columns: 360px 1fr;
-  gap: 56px;
+  grid-template-columns: 520px 1fr; /* foto grande e texto ao lado */
+  column-gap: 56px;                /* era 88px, agora mais próximo */
   align-items: start;
 }
-<section class="skills">
-  <div class="skill-item">
-    <h3>Process Analysis</h3>
-    <p>Business process modelling, workflow optimization, operational mapping.</p>
-  </div>
-
-  <div class="skill-item">
-    <h3>Data & Systems</h3>
-    <p>Relational database design, normalization (1NF–3NF), EER modelling.</p>
-  </div>
-
-  <div class="skill-item">
-    <h3>Operational Strategy</h3>
-    <p>Inventory control frameworks, failure tracking systems, structured decision logic.</p>
-  </div>
-</section>
 .footer-note{
   margin-top: 18px;
   color: var(--muted);
@@ -191,13 +173,13 @@ h1{
 }
 
 .wix-photo img{
-  width: 320px;
-  height: 320px;
+  width: 500px;
+  height: 500px;
   object-fit: cover;
-  border-radius: 999px;        /* foto redonda */
-  filter: grayscale(100%);     /* P&B como no Wix */
+  border-radius: 50%;
+  filter: grayscale(100%);
+  display:block;
 }
-
 .wix-title{
   margin: 0 0 18px;
   font-size: clamp(1.8rem, 3.2vw, 2.4rem);
@@ -220,42 +202,64 @@ h1{
 }
 
 .wix-actions{
-  display: flex;
-  gap: 14px;
+  display:flex;
+  gap: 26px;
   flex-wrap: wrap;
-  margin-top: 18px;
+ margin-top: 30px;
 }
 
 .wix-btn{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 18px;
-  border-radius: 999px;     /* botões “pílula” */
-  border: 1px solid #0f172a;
-  color: #0f172a;
-  text-decoration: none;
+  width: 140px;
+  height: 140px;
+  border-radius: 999px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
   font-weight: 700;
-  background: transparent;  /* outline */
+  font-size: 18px; /* texto maior */
+  color:#0f172a;
+  border: none;
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.10);
+  transition: transform .12s ease, box-shadow .12s ease, filter .12s ease;
 }
+.wix-btn:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.14);
+  filter: brightness(0.98);
+}
+.wix-btn-resume{ background:#3B82F6; }   /* azul */
+.wix-btn-projects{ background:#9CA3AF; } /* cinza */
+.wix-btn-contact{ background:#10B981; }  /* verde */
 
 .wix-btn:hover{
   background: #0f172a;
   color: #ffffff;
 }
+.wix-hero{
+  max-width: 1180px;     /* controla largura do bloco */
+  margin: 0 auto;        /* centraliza no meio */
+}
 
 /* Mobile */
-@media (max-width: 860px){
-.wix-hero {
-  display: flex;
-  align-items: flex-start;
-  gap: 100px;
-  padding: 80px 0;
+@media (max-width: 980px){
+  .container{ padding: 0 16px; }
+
+  .wix-hero{
+    grid-template-columns: 1fr;
+    row-gap: 22px;
+    padding: 36px 0;
+  }
+
+  .wix-photo img{
+    width: 300px;
+    height: 300px;
+  }
+
+  .wix-btn{
+    width: 120px;
+    height: 120px;
+    font-size: 16px;
+  }
 }
-.wix-photo img {
-  width: 380px;
-  height: 480px;
-  object-fit: cover;
-  border-radius: 6px;
-}
-}
+
