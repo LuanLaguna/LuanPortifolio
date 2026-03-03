@@ -251,8 +251,8 @@ h1{
     gap: 26px;
   }
 .wix-photo img {
-  width: 340px;
-  height: 420px;
+  width: 380px;
+  height: 480px;
   object-fit: cover;
   border-radius: 6px;
 }
