@@ -147,6 +147,19 @@ h1{
 }
 .footer a:hover{ color:var(--text); }
 /* --- Wix-like Home Layout --- */
+.wix-content {
+  max-width: 520px;
+}
+
+.wix-title {
+  font-size: 42px;
+  line-height: 1.2;
+}
+
+.wix-text {
+  color: #4a5568;
+  line-height: 1.6;
+}
 .wix-hero{
   padding: 56px 0 40px;
   display: grid;
@@ -154,6 +167,22 @@ h1{
   gap: 56px;
   align-items: start;
 }
+<section class="skills">
+  <div class="skill-item">
+    <h3>Process Analysis</h3>
+    <p>Business process modelling, workflow optimization, operational mapping.</p>
+  </div>
+
+  <div class="skill-item">
+    <h3>Data & Systems</h3>
+    <p>Relational database design, normalization (1NF–3NF), EER modelling.</p>
+  </div>
+
+  <div class="skill-item">
+    <h3>Operational Strategy</h3>
+    <p>Inventory control frameworks, failure tracking systems, structured decision logic.</p>
+  </div>
+</section>
 .footer-note{
   margin-top: 18px;
   color: var(--muted);
