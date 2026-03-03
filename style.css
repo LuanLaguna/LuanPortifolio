@@ -44,10 +44,11 @@ body{
 }
 
 .links a{
-  margin-left:16px;
+  margin-left:18px;
   text-decoration:none;
   color:var(--muted);
   font-weight:600;
+  font-size: 0.95rem;
 }
 
 .links a:hover{ color:var(--text); }
@@ -67,8 +68,10 @@ body{
 
 h1{
   margin:0 0 14px;
-  font-size: clamp(2rem, 4vw, 3rem);
-  line-height:1.15;
+  font-size: clamp(2.2rem, 4.6vw, 3.2rem);
+  line-height:1.1;
+  font-weight: 750; /* antes estava muito pesado */
+  letter-spacing: -0.02em;
 }
 
 .lead{
@@ -108,10 +111,10 @@ h1{
 
 .card{
   margin:24px 0 64px;
-  padding:22px;
+  padding:26px;
   border:1px solid var(--line);
-  background:var(--card);
-  border-radius:16px;
+  background:#ffffff;
+  border-radius:18px;
 }
 
 .card h2{ margin:0 0 10px; }
