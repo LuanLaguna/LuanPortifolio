@@ -143,3 +143,83 @@ h1{
   font-weight:600;
 }
 .footer a:hover{ color:var(--text); }
+/* --- Wix-like Home Layout --- */
+.wix-hero{
+  padding: 56px 0 40px;
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 56px;
+  align-items: start;
+}
+.footer-note{
+  margin-top: 18px;
+  color: var(--muted);
+  font-weight: 600;
+  font-size: .9rem;
+}
+
+.wix-photo img{
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 999px;        /* foto redonda */
+  filter: grayscale(100%);     /* P&B como no Wix */
+}
+
+.wix-title{
+  margin: 0 0 18px;
+  font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.wix-subtitle{
+  margin: 0 0 14px;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.wix-text{
+  margin: 0 0 14px;
+  max-width: 75ch;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.wix-actions{
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
+.wix-btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  border-radius: 999px;     /* botões “pílula” */
+  border: 1px solid #0f172a;
+  color: #0f172a;
+  text-decoration: none;
+  font-weight: 700;
+  background: transparent;  /* outline */
+}
+
+.wix-btn:hover{
+  background: #0f172a;
+  color: #ffffff;
+}
+
+/* Mobile */
+@media (max-width: 860px){
+  .wix-hero{
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+  .wix-photo img{
+    width: 220px;
+    height: 220px;
+  }
+}
