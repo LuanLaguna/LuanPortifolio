@@ -549,6 +549,12 @@ h1{
 .xp{
   padding: 26px 0 10px;
 }
+.xp-company{
+  font-weight:600;
+  color:var(--muted);
+  margin-top:4px;
+  margin-bottom:8px;
+}
 
 .xp-title{
   margin: 18px 0 18px;
