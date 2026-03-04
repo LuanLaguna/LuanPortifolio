@@ -18,29 +18,149 @@
     </div>
   </header>
 
-  <main class="container page">
-    <h1 class="page-title">Contact</h1>
-    <p class="lead">If you’re hiring or want to discuss projects, feel free to reach out.</p>
+  <main class="container page contact-page">
 
-    <section class="card">
-      <h2>Direct</h2>
-      <p><strong>Email:</strong> <a href="mailto:luanlaguna7@gmail.com">luanlaguna7@gmail.com</a></p>
-      <p><strong>LinkedIn:</strong> <a href="#" target="_blank" rel="noopener">Add your LinkedIn link here</a></p>
-      <p><strong>GitHub:</strong> <a href="https://github.com/LuanLaguna" target="_blank" rel="noopener">github.com/LuanLaguna</a></p>
+    <header class="contact-hero">
+      <div class="contact-hero-left">
+        <h1 class="contact-title">Contact</h1>
+        <p class="contact-subtitle">
+          I am always interested in conversations around business systems, process design, and digital transformation. Let’s connect!
+        </p>
+      </div>
+    </header>
+
+    <section class="contact-grid">
+
+      <!-- Left: optional small direct block (matches your style) -->
+    <aside class="contact-direct card-soft">
+  <h2 class="contact-direct-title">Direct</h2>
+
+  <div class="direct-list">
+
+    <a class="direct-item" href="mailto:luanlaguna7@gmail.com">
+      <span class="direct-dot dot-blue" aria-hidden="true"></span>
+      <span class="direct-meta">
+        <span class="direct-label">Email</span>
+        <span class="direct-value">luanlaguna7@gmail.com</span>
+      </span>
+    </a>
+
+    <a class="direct-item" href="#" target="_blank" rel="noopener">
+      <span class="direct-dot dot-slate" aria-hidden="true"></span>
+      <span class="direct-meta">
+        <span class="direct-label">LinkedIn</span>
+        <span class="direct-value">Add your LinkedIn link here</span>
+      </span>
+    </a>
+
+    <a class="direct-item" href="https://github.com/LuanLaguna" target="_blank" rel="noopener">
+      <span class="direct-dot dot-green" aria-hidden="true"></span>
+      <span class="direct-meta">
+        <span class="direct-label">GitHub</span>
+        <span class="direct-value">github.com/LuanLaguna</span>
+      </span>
+    </a>
+
+  </div>
+</aside>
+
+      <!-- Right: form (Wix-like) -->
+      <section class="contact-form-wrap card-soft" aria-label="Contact form">
+
+        <!--
+          IMPORTANT:
+          Este form NÃO envia sozinho sem backend.
+          Se quiser “enviar de verdade”, depois a gente conecta em Formspree / Netlify Forms.
+        -->
+        <form class="contact-form" action="#" method="post">
+
+          <div class="form-row two">
+            <div class="field">
+              <label for="firstName">First Name <span aria-hidden="true">*</span></label>
+              <input id="firstName" name="firstName" type="text" required />
+            </div>
+
+            <div class="field">
+              <label for="lastName">Last Name <span aria-hidden="true">*</span></label>
+              <input id="lastName" name="lastName" type="text" required />
+            </div>
+          </div>
+
+          <div class="form-row two">
+            <div class="field">
+              <label for="email">Email <span aria-hidden="true">*</span></label>
+              <input id="email" name="email" type="email" required />
+            </div>
+
+            <div class="field">
+              <label for="subject">Subject</label>
+              <input id="subject" name="subject" type="text" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="7"></textarea>
+            </div>
+          </div>
+
+          <button class="contact-submit" type="submit">Submit</button>
+        </form>
+
+      </section>
+
     </section>
+
   </main>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div>
-        <div class="footer-title">Email</div>
-        <a href="mailto:luanlaguna7@gmail.com">luanlaguna7@gmail.com</a>
+  <footer class="footer-pro">
+  <div class="container footer-pro-inner">
+
+    <div class="footer-pro-grid">
+      <!-- Navigation -->
+      <div class="footer-block">
+        <div class="footer-kicker">Navigation</div>
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="index.html">Home</a>
+          <a href="resume.html">Resume</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+        </nav>
       </div>
-      <div>
-        <div class="footer-title">Follow</div>
-        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+
+      <!-- Get in touch -->
+      <div class="footer-block">
+        <div class="footer-kicker">Get in touch</div>
+        <div class="footer-text">
+          <a class="footer-strong" href="mailto:luanlaguna7@gmail.com">luanlaguna7@gmail.com</a>
+          <div class="footer-muted">Christchurch, New Zealand</div>
+        </div>
+      </div>
+
+      <!-- Connect -->
+      <div class="footer-block">
+        <div class="footer-kicker">Connect</div>
+        <div class="footer-links">
+          <a href="https://www.linkedin.com/in/SEU-LINK-AQUI/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/LuanLaguna" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="footer-cta">
+        <a class="footer-cta-btn" href="contact.html">
+          Start a conversation
+        </a>
       </div>
     </div>
-  </footer>
+
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Luan Laguna. All rights reserved.</div>
+      <div class="footer-tagline">Systems, data, and operations—built with clarity.</div>
+    </div>
+
+  </div>
+</footer>
 </body>
 </html>

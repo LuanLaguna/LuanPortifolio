@@ -17,41 +17,240 @@
       </nav>
     </div>
   </header>
+<main class="container page projects-page">
+<header class="projects-hero">
+  <h1 class="projects-title">Projects</h1>
+  <p class="projects-subtitle">
+    Selected work showcasing database modelling, process design, and operations analytics.
+  </p>
+</header>
 
-  <main class="container page">
-    <h1 class="page-title">Projects</h1>
-    <p class="lead">Selected work showcasing database modelling, process design, and operations analytics.</p>
+<section class="project-list">
 
-    <section class="grid">
-      <article class="project">
-        <h2>Real Estate Database Design</h2>
-        <p>Conceptual modelling (EER/ER), relational schema, and 1NF–3NF normalisation.</p>
-        <div class="tags">
-          <span>ER/EER</span><span>Normalisation</span><span>Data Integrity</span>
-        </div>
-      </article>
+  <!-- Project 1 -->
+  <article class="project">
+    <div class="project-left">
 
-      <article class="project">
-        <h2>Inventory & Failure Tracking (BRMachine)</h2>
-        <p>Structured tracking of spare parts, failure patterns, and repair vs replacement logic.</p>
-        <div class="tags">
-          <span>Operations</span><span>Inventory</span><span>Decision Logic</span>
-        </div>
-      </article>
-    </section>
-  </main>
+  <h2 class="project-title">
+    End-to-End Information System Analysis &amp; Design — Web-Based Ordering Platform
+  </h2>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div>
-        <div class="footer-title">Email</div>
-        <a href="mailto:luanlaguna7@gmail.com">luanlaguna7@gmail.com</a>
+  <p class="project-lead">
+    As part of my Master of Business Informatics, I contributed to the full analysis and design of a web-based restaurant ordering and operations management system.
+  </p>
+
+  <p class="project-text">
+    The objective of the project was to analyse and redesign the operational workflow of a restaurant environment by developing a structured information system capable of supporting both front-of-house and kitchen operations. The system aimed to reduce manual order handling, improve operational visibility, and minimise service delays during peak hours.
+  </p>
+
+  <p class="project-text">
+    The analysis phase focused on identifying real operational bottlenecks such as long queues, communication gaps between staff and kitchen teams, and the lack of a centralised view of order status. Based on these findings, the system design introduced a digital ordering and workflow management solution to streamline restaurant operations.
+  </p>
+
+  <p class="project-text">
+    My contribution covered several stages of the systems analysis and design lifecycle, including:
+  </p>
+
+  <ul class="project-bullets">
+    <li>Defining the system vision and clarifying the project scope</li>
+    <li>Applying event decomposition techniques to identify external, temporal, and state-driven events</li>
+    <li>Developing use case models to represent system interactions and user behaviour</li>
+    <li>Designing domain model class diagrams to represent entities and relationships</li>
+    <li>Mapping operational processes to improve workflow visibility and service coordination</li>
+  </ul>
+
+  <div class="project-tags">
+    <span class="tag">UML</span>
+    <span class="tag">Use Cases</span>
+    <span class="tag">Process Mapping</span>
+    <span class="tag">Domain Model</span>
+  </div>
+
+</div>
+
+    <aside class="project-right">
+      <div class="project-media">
+        <!-- troca o src pela tua imagem -->
+        <img src="assets/projects/ordering-platform.jpg" alt="Ordering platform project presentation" />
       </div>
-      <div>
-        <div class="footer-title">Follow</div>
-        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+
+      <div class="project-tools">
+        <h3>Tools &amp; Methods</h3>
+        <ul>
+          <li>UML Modelling</li>
+          <li>Event Decomposition</li>
+          <li>Requirements Analysis</li>
+          <li>Domain Modelling</li>
+          <li>ER Design</li>
+          <li>Process Mapping</li>
+        </ul>
+      </div>
+    </aside>
+  </article>
+
+  <!-- Project 2 -->
+  <article class="project">
+    <div class="project-left">
+
+  <h2 class="project-title">
+    Database Design &amp; Normalisation — Relational Data Architecture Case Study
+  </h2>
+
+  <p class="project-lead">
+    This project focused on the design and structuring of relational database architectures using formal database modelling techniques.
+  </p>
+
+  <p class="project-text">
+    The objective was to develop robust database schemas capable of supporting complex business scenarios while maintaining data integrity, consistency, and scalability. The project involved translating conceptual models into structured relational database designs that minimise redundancy and optimise data relationships.
+  </p>
+
+  <p class="project-text">
+    The work began with conceptual modelling through Enhanced Entity-Relationship (EER) diagrams, where entities, attributes, and relationships were identified and structured to accurately represent real-world systems. These models were then converted into relational schemas suitable for implementation in relational database systems.
+  </p>
+
+  <p class="project-text">
+    A key focus of the project was the application of database normalisation principles to ensure efficient data organisation and eliminate redundancy.
+  </p>
+
+  <ul class="project-bullets">
+    <li>Development of Enhanced Entity-Relationship (EER) diagrams for complex business environments</li>
+    <li>Definition of entities, attributes, relationships, cardinalities, and participation constraints</li>
+    <li>Translation of conceptual models into relational schema structures</li>
+    <li>Identification and analysis of functional dependencies</li>
+    <li>Application of database normalisation techniques from First to Third Normal Form (1NF–3NF)</li>
+  </ul>
+
+  <div class="project-tags">
+    <span class="tag">EER</span>
+    <span class="tag">ER</span>
+    <span class="tag">1NF–3NF</span>
+    <span class="tag">Data Integrity</span>
+  </div>
+
+</div>
+
+    <aside class="project-right">
+      <div class="project-media">
+        <img src="assets/projects/db-normalisation.jpg" alt="Database design and normalisation" />
+      </div>
+
+      <div class="project-tools">
+        <h3>Tools &amp; Methods</h3>
+        <ul>
+          <li>EER Modelling</li>
+          <li>ER Diagrams</li>
+          <li>Functional Dependency Analysis</li>
+          <li>Database Normalisation</li>
+          <li>Relational Schema Design</li>
+        </ul>
+      </div>
+    </aside>
+  </article>
+
+  <!-- Project 3 -->
+  <article class="project">
+    <div class="project-left">
+
+  <h2 class="project-title">
+    Operational Inventory &amp; Failure Tracking System — BRMachine
+  </h2>
+
+  <p class="project-lead">
+    During my experience working with entertainment and vending machines at BRMachine, I developed a structured operational framework to manage spare parts inventory and track recurring equipment failures across distributed machines.
+  </p>
+
+  <p class="project-text">
+    The business operated multiple machines installed in different commercial locations, which required continuous maintenance and replacement of mechanical and electronic components. However, the absence of a structured tracking system made it difficult to monitor recurring failures, control spare parts usage, and manage technician interventions efficiently.
+  </p>
+
+  <p class="project-text">
+    To address this, I designed a simple yet structured tracking framework aimed at improving operational visibility and maintenance planning. The system allowed the team to monitor spare parts consumption, categorise machine failures, and support operational decisions regarding repair or component replacement.
+  </p>
+
+  <ul class="project-bullets">
+    <li>Weekly tracking of spare parts usage across different machines and locations</li>
+    <li>Identification of recurring failure patterns in mechanical and electronic components</li>
+    <li>Categorisation of failure types to support maintenance prioritisation</li>
+    <li>Allocation control of parts per technician and intervention record tracking</li>
+    <li>Decision logic to evaluate repair versus replacement scenarios for cost optimisation</li>
+  </ul>
+
+  <div class="project-tags">
+    <span class="tag">Operations</span>
+    <span class="tag">Inventory</span>
+    <span class="tag">Decision Logic</span>
+  </div>
+
+</div>
+
+    <aside class="project-right">
+      <div class="project-media">
+        <img src="assets/projects/brmachine-dashboard.jpg" alt="Operational tracking dashboard concept" />
+      </div>
+
+      <div class="project-tools">
+        <h3>Tools &amp; Methods</h3>
+        <ul>
+          <li>Operational Process Design</li>
+          <li>Inventory Structuring</li>
+          <li>Failure Pattern Tracking</li>
+          <li>Workflow Coordination</li>
+          <li>Decision Logic Framework</li>
+        </ul>
+      </div>
+    </aside>
+  </article>
+
+</section>
+
+ <footer class="footer-pro">
+  <div class="container footer-pro-inner">
+
+    <div class="footer-pro-grid">
+      <!-- Navigation -->
+      <div class="footer-block">
+        <div class="footer-kicker">Navigation</div>
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="index.html">Home</a>
+          <a href="resume.html">Resume</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+
+      <!-- Get in touch -->
+      <div class="footer-block">
+        <div class="footer-kicker">Get in touch</div>
+        <div class="footer-text">
+          <a class="footer-strong" href="mailto:luanlaguna7@gmail.com">luanlaguna7@gmail.com</a>
+          <div class="footer-muted">Christchurch, New Zealand</div>
+        </div>
+      </div>
+
+      <!-- Connect -->
+      <div class="footer-block">
+        <div class="footer-kicker">Connect</div>
+        <div class="footer-links">
+          <a href="https://www.linkedin.com/in/SEU-LINK-AQUI/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/LuanLaguna" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="footer-cta">
+        <a class="footer-cta-btn" href="contact.html">
+          Start a conversation
+        </a>
       </div>
     </div>
-  </footer>
+
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Luan Laguna. All rights reserved.</div>
+      <div class="footer-tagline">Systems, data, and operations—built with clarity.</div>
+    </div>
+
+  </div>
+</footer>
+ 
 </body>
 </html>
