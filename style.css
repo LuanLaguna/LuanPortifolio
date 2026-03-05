@@ -137,7 +137,7 @@ h1{
 
 .footer-pro-grid{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr auto;
+  grid-template-columns: 1.2fr 0.9fr auto;
   gap: 22px;
   align-items: start;
   padding: 8px 0 18px;
@@ -258,8 +258,8 @@ h1{
   display:flex;
   gap:14px;
   align-items:center;
-  justify-content:center; /* <<< ADICIONE ISTO */
-  width:100%;             /* <<< ADICIONE ISTO */
+  justify-content:flex-start;
+  width:auto;
 }
 
 .social-icon{
