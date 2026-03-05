@@ -1358,24 +1358,3 @@ h1{
     text-underline-offset: 3px;
   }
 }
-/* ===== FINAL OVERRIDES (Footer Connect desktop) ===== */
-.footer-pro .footer-block{
-  display:flex;
-  flex-direction:column;
-  align-items:flex-start;
-}
-
-.footer-pro .footer-social{
-  display:flex;
-  gap:14px;
-  align-items:center;
-  justify-content:flex-start !important;
-  width:auto !important;
-  margin-top:6px;
-}
-
-/* garante que o link não vira bloco gigante */
-.footer-pro .footer-social a{
-  display:inline-flex;
-  align-items:center;
-}
