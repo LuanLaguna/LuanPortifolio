@@ -403,6 +403,21 @@ h1{
     font-size: 16px;
   }
 }
+
+@media (max-width: 520px){
+  .wix-actions{
+    gap: 8px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .wix-btn{
+    width: 84px;
+    height: 84px;
+    font-size: 13px;
+    flex: 0 0 auto;
+  }
+}
 /* =========================
    Resume Page (only)
    ========================= */
@@ -1359,4 +1374,33 @@ h1{
   .links.is-open a:hover{
     background: #f1f5f9;
   }
+}
+
+.back-to-top{
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #0f172a;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 800;
+  box-shadow: 0 10px 24px rgba(15,23,42,.22);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity .2s ease, transform .2s ease, visibility .2s ease;
+  z-index: 1200;
+}
+
+.back-to-top.is-visible{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }

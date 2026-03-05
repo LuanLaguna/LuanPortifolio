@@ -261,25 +261,37 @@
 
   </div>
 </footer>
+<button class="back-to-top" type="button" aria-label="Back to top">↑</button>
 <script>
   (function () {
     const btn = document.querySelector(".nav-toggle");
     const nav = document.querySelector("#site-nav");
-    if (!btn || !nav) return;
+    if (btn && nav) {
+      btn.addEventListener("click", () => {
+        const isOpen = nav.classList.toggle("is-open");
+        btn.classList.toggle("is-active", isOpen);
+        btn.setAttribute("aria-expanded", String(isOpen));
+      });
 
-    btn.addEventListener("click", () => {
-      const isOpen = nav.classList.toggle("is-open");
-      btn.classList.toggle("is-active", isOpen);
-      btn.setAttribute("aria-expanded", String(isOpen));
-    });
+      nav.addEventListener("click", (e) => {
+        if (e.target.tagName === "A" && nav.classList.contains("is-open")) {
+          nav.classList.remove("is-open");
+          btn.classList.remove("is-active");
+          btn.setAttribute("aria-expanded", "false");
+        }
+      });
+    }
 
-    nav.addEventListener("click", (e) => {
-      if (e.target.tagName === "A" && nav.classList.contains("is-open")) {
-        nav.classList.remove("is-open");
-        btn.classList.remove("is-active");
-        btn.setAttribute("aria-expanded", "false");
-      }
+    const toTop = document.querySelector(".back-to-top");
+    if (!toTop) return;
+    const toggleToTop = () => {
+      toTop.classList.toggle("is-visible", window.scrollY > 260);
+    };
+    window.addEventListener("scroll", toggleToTop, { passive: true });
+    toTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
+    toggleToTop();
   })();
 </script>
 </body>
