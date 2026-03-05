@@ -7,17 +7,24 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="nav">
-    <div class="container nav-inner">
-      <a class="brand" href="index.html">Luan Laguna</a>
-    <nav class="links">
-  <a href="index.html">Home</a>
-  <a href="resume.html">Resume</a>
-  <a href="projects.html">Projects</a>
-  <a href="contact.html">Contact</a>
-</nav>
-    </div>
-  </header>
+ <header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html">Luan Laguna</a>
+
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+
+    <nav id="site-nav" class="links" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="resume.html">Resume</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
 
   <main class="container page contact-page">
 
@@ -203,5 +210,6 @@
 
   </div>
 </footer>
+<script src="main.js"></script>
 </body>
 </html>
