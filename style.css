@@ -1423,3 +1423,60 @@ h1{
   visibility: visible;
   transform: translateY(0);
 }
+
+/* =========================
+   Tablet and iPad tuning
+   Keeps mobile (<=768) and desktop (>1100) behavior untouched.
+   ========================= */
+@media (min-width: 769px) and (max-width: 1100px){
+  /* Keep desktop nav on tablets */
+  .nav-toggle{ display: none !important; }
+  .links{ display: flex !important; }
+
+  /* Home hero: avoid narrow single-column tablet layout */
+  .wix-hero{
+    grid-template-columns: minmax(280px, 360px) 1fr;
+    column-gap: 32px;
+    row-gap: 0;
+    padding: 44px 0 28px;
+  }
+
+  .wix-content{ max-width: none; }
+
+  .wix-photo img{
+    width: min(42vw, 360px);
+    height: min(42vw, 360px);
+  }
+
+  .wix-actions{ gap: 16px; }
+
+  .wix-btn{
+    width: 108px;
+    height: 108px;
+    font-size: 15px;
+  }
+
+  /* Resume and cards: keep 2-column rhythm on tablets */
+  .resume-hero{ flex-direction: row; }
+  .grid-3{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grid-2{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  /* Projects: keep desktop-like composition on tablets */
+  .project{ grid-template-columns: 1.05fr 0.95fr; }
+  .project-media-mobile{ display: none; }
+  .project-right .project-media{ display: block; }
+
+  /* Footer: avoid centered mobile stack on tablets */
+  .footer-pro-grid{
+    grid-template-columns: 1fr 1fr;
+    justify-items: start;
+    text-align: left;
+  }
+  .footer-block{ text-align: left; }
+  .footer-cta{ justify-content: flex-start; }
+
+  /* Contact form/details: avoid overly stacked tablet view */
+  .contact-grid{ grid-template-columns: 1fr 1fr; }
+  .form-row.two{ grid-template-columns: 1fr 1fr; }
+}
+
