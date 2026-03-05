@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -30,7 +30,7 @@
       <div class="contact-hero-left">
         <h1 class="contact-title">Contact</h1>
         <p class="contact-subtitle">
-          I am always interested in conversations around business systems, process design, and digital transformation. Let’s connect!
+          I am always interested in conversations around business systems, process design, and digital transformation. Letâ€™s connect!
         </p>
       </div>
     </header>
@@ -99,10 +99,14 @@
 
         <!--
           IMPORTANT:
-          Este form NÃO envia sozinho sem backend.
-          Se quiser “enviar de verdade”, depois a gente conecta em Formspree / Netlify Forms.
+          Este form NÃƒO envia sozinho sem backend.
+          Se quiser â€œenviar de verdadeâ€, depois a gente conecta em Formspree / Netlify Forms.
         -->
-        <form class="contact-form" action="#" method="post">
+        <form class="contact-form" action="https://formsubmit.co/luanlaguna7@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New portfolio contact message" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+          <input type="hidden" name="_next" value="https://luanlaguna.github.io/LuanPortifolio/contact.html?sent=1" />
 
           <div class="form-row two">
             <div class="field">
@@ -131,7 +135,7 @@
           <div class="form-row">
             <div class="field">
               <label for="message">Message</label>
-              <textarea id="message" name="message" rows="7"></textarea>
+              <textarea id="message" name="message" rows="7" required></textarea>
             </div>
           </div>
 
@@ -237,3 +241,5 @@
 </script>
 </body>
 </html>
+
+
