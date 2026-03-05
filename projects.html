@@ -10,7 +10,12 @@
   <header class="nav">
     <div class="container nav-inner">
       <a class="brand" href="index.html">Luan Laguna</a>
-      <nav class="links">
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <nav id="site-nav" class="links" aria-label="Primary">
   <a href="index.html">Home</a>
   <a href="resume.html">Resume</a>
   <a href="projects.html">Projects</a>
@@ -256,6 +261,26 @@
 
   </div>
 </footer>
- 
+<script>
+  (function () {
+    const btn = document.querySelector(".nav-toggle");
+    const nav = document.querySelector("#site-nav");
+    if (!btn || !nav) return;
+
+    btn.addEventListener("click", () => {
+      const isOpen = nav.classList.toggle("is-open");
+      btn.classList.toggle("is-active", isOpen);
+      btn.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    nav.addEventListener("click", (e) => {
+      if (e.target.tagName === "A" && nav.classList.contains("is-open")) {
+        nav.classList.remove("is-open");
+        btn.classList.remove("is-active");
+        btn.setAttribute("aria-expanded", "false");
+      }
+    });
+  })();
+</script>
 </body>
 </html>
