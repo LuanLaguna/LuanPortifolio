@@ -244,12 +244,6 @@ h1{
 
   .footer-block{ text-align: center; }
 
-  .footer-social{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-  }
-
   .footer-cta{
     width: 100%;
     display: flex;
@@ -1269,5 +1263,73 @@ h1{
   .card-soft{
     width: 100%;
     max-width: 100%;
+  }
+}
+/* =========================
+   Mobile Hamburger Nav
+   ========================= */
+
+.nav-toggle{
+  display:none;           /* aparece só no mobile */
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 0;
+}
+
+.nav-toggle-bar{
+  display:block;
+  width: 20px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 999px;
+}
+
+/* Mobile behaviour */
+@media (max-width: 768px){
+  .nav-inner{
+    position: relative; /* para o dropdown ancorar */
+  }
+
+  .nav-toggle{
+    display: inline-flex;
+  }
+
+  /* esconde o menu no mobile por padrão */
+  .links{
+    display: none;
+  }
+
+  /* quando abrir */
+  .links.is-open{
+    display: grid;
+    gap: 10px;
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    left: 0;
+    padding: 14px;
+    background: rgba(255,255,255,.98);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    box-shadow: 0 18px 40px rgba(15,23,42,.12);
+  }
+
+  /* deixa os links bonitos no dropdown */
+  .links.is-open a{
+    margin-left: 0;         /* remove o margin desktop */
+    padding: 10px 12px;
+    border-radius: 12px;
+    font-weight: 700;
+  }
+
+  .links.is-open a:hover{
+    background: #f1f5f9;
   }
 }
