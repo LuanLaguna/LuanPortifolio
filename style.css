@@ -1428,12 +1428,12 @@ h1{
    Tablet and iPad tuning
    Keeps mobile (<=768) and desktop (>1100) behavior untouched.
    ========================= */
-@media (min-width: 769px) and (max-width: 1100px){
+@media (min-width: 768px) and (max-width: 1100px){
   /* Keep desktop nav on tablets */
   .nav-toggle{ display: none !important; }
-  .links{ display: flex !important; }
+  .links{ display: flex !important; align-items: center; flex-wrap: wrap; }
 
-  /* Home hero: avoid narrow single-column tablet layout */
+  `r`n  /* Use more horizontal space on iPad portrait */`r`n  .container{ padding-left: 12px; padding-right: 12px; }`r`n/* Home hero: avoid narrow single-column tablet layout */
   .wix-hero{
     grid-template-columns: minmax(280px, 360px) 1fr;
     column-gap: 32px;
@@ -1479,4 +1479,5 @@ h1{
   .contact-grid{ grid-template-columns: 1fr 1fr; }
   .form-row.two{ grid-template-columns: 1fr 1fr; }
 }
+
 
