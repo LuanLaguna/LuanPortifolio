@@ -236,17 +236,33 @@ h1{
 
 /* responsive */
 @media (max-width: 980px){
-  .footer-pro-grid{
-    grid-template-columns: 1fr;
+  .footer-block{
+    text-align: center;
   }
+
+  .footer-links{
+    justify-items: center;
+  }
+
+  .footer-text{
+    justify-items: center;
+  }
+
+  .footer-social{
+    width: 100%;
+    justify-content: center;
+  }
+
   .footer-cta{
-    justify-content: flex-start;
+    width: 100%;
+    justify-content: center;
   }
 }
 .footer-social{
   display:flex;
   gap:14px;
   align-items:center;
+  justify-content:center;   /* centraliza */
 }
 
 .social-icon{
@@ -996,9 +1012,10 @@ h1{
   margin-top: 8px;
 }
 
+/* FIX: Contact Direct alignment */
 .direct-item{
   display: grid;
-  grid-template-columns: 14px 1fr;
+  grid-template-columns: 40px 1fr; /* coluna fixa pro ícone */
   gap: 12px;
   align-items: center;
   padding: 12px 14px;
@@ -1008,11 +1025,26 @@ h1{
   text-decoration: none;
   transition: transform .12s ease, box-shadow .12s ease, filter .12s ease;
 }
-.direct-item:hover{
-  transform: translateY(-1px);
-  box-shadow: 0 10px 22px rgba(15,23,42,0.08);
-  filter: brightness(.99);
+
+.direct-item .direct-icon{
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  display: grid;
+  place-items: center;
+  background: #fff;
 }
+
+.direct-item .direct-icon svg{
+  width: 18px;
+  height: 18px;
+  fill: var(--text);
+  opacity: .9;
+}
+
+.direct-label{ line-height: 1.2; }
+.direct-value{ line-height: 1.2; }
 
 .direct-dot{
   width: 10px;
@@ -1205,5 +1237,34 @@ h1{
   .project,
   .xp-item{
     border-radius: 16px;
+  }
+}
+/* ===== Fix mobile spacing + convert grids to 1 column where needed ===== */
+@media (max-width: 768px){
+
+  /* mantém respiro consistente */
+  .container{
+    padding: 0 18px !important;
+  }
+
+  /* Experience items: grid -> 1 column */
+  .xp-item{
+    grid-template-columns: 1fr !important;
+  }
+
+  /* deixa o ícone no topo e não “comendo” largura */
+  .xp-icon{
+    width: 48px;
+    height: 48px;
+  }
+
+  /* cards não podem estourar a tela */
+  .skill-card,
+  .resume-card,
+  .project,
+  .xp-item,
+  .card-soft{
+    width: 100%;
+    max-width: 100%;
   }
 }
