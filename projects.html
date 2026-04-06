@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
@@ -24,304 +24,227 @@
         <span class="nav-toggle-bar"></span>
       </button>
       <nav id="site-nav" class="links" aria-label="Primary">
-  <a href="index.html">Home</a>
-  <a href="resume.html">Resume</a>
-  <a href="projects.html">Projects</a>
-  <a href="contact.html">Contact</a>
-</nav>
+        <a href="index.html">Home</a>
+        <a href="resume.html">Resume</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
   </header>
-<main class="container page projects-page">
-<header class="projects-hero">
-  <h1 class="projects-title">Projects</h1>
-  <p class="projects-subtitle">
-    Selected work showcasing database modelling, process design, and operations analytics.
-  </p>
-</header>
 
-<section class="project-list">
+  <main class="container page projects-page">
 
-  <!-- Project 1 -->
-  <article class="project">
-    <div class="project-left">
+    <header class="projects-hero">
+      <h1 class="projects-title">Projects</h1>
+      <p class="projects-subtitle">
+        Selected work showcasing database modelling, process design, and operations analytics.
+      </p>
+    </header>
 
-  <h2 class="project-title">
-    End-to-End Information System Analysis &amp; Design - Web-Based Ordering Platform
-  </h2>
+    <!-- ===== FEATURED PROJECTS ===== -->
+    <section aria-label="Featured projects">
+      <div class="featured-cards">
 
-    <div class="project-media project-media-mobile">
-    <img src="assets/projects/ordering-platform.jpg" alt="Ordering platform project presentation" />
-  </div>
+        <!-- Featured 1 – OpsQuery (image left, text right) -->
+        <article class="featured-card">
+          <div class="featured-card-image">
+            <img src="assets/projects/opsquery.jpg" alt="OpsQuery AI SQL Assistant screenshot" />
+          </div>
+          <div class="featured-card-body">
+            <p class="featured-card-kicker">AI &middot; SQL &middot; Developer Tool</p>
+            <h2 class="featured-card-title">OpsQuery — AI SQL Assistant</h2>
+            <p class="featured-card-desc">
+              A natural-language-to-SQL tool that lets users query databases using plain English.
+              Built to reduce friction in data retrieval for non-technical stakeholders and speed up
+              analytical workflows across operations teams.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">SQL</span>
+              <span class="tag">LLM</span>
+              <span class="tag">FastAPI</span>
+            </div>
+            <div class="featured-card-actions">
+              <!-- GitHub -->
+              <a href="https://github.com/LuanLaguna/opsquery" target="_blank" rel="noopener" aria-label="View OpsQuery on GitHub" class="icon-btn">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.87 10.94c.58.1.79-.25.79-.56v-2.17c-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.27-1.69-1.27-1.69-1.04-.71.08-.69.08-.69 1.15.08 1.76 1.18 1.76 1.18 1.02 1.76 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.3 1.18-3.12-.12-.29-.51-1.45.11-3.03 0 0 .96-.31 3.15 1.19a10.9 10.9 0 0 1 5.73 0c2.19-1.5 3.15-1.19 3.15-1.19.62 1.58.23 2.74.11 3.03.73.82 1.18 1.86 1.18 3.12 0 4.42-2.69 5.39-5.25 5.67.41.35.77 1.04.77 2.1v3.11c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+              </a>
+              <!-- External link / more details -->
+              <a href="https://github.com/LuanLaguna/opsquery" target="_blank" rel="noopener" aria-label="More details about OpsQuery" class="icon-btn">
+                <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
 
-<p class="project-lead">
-    As part of my Master of Business Informatics, I contributed to the full analysis and design of a web-based restaurant ordering and operations management system.
-  </p>
+        <!-- Featured 2 – Restaurant Ordering Platform (image right, text left) -->
+        <article class="featured-card reverse">
+          <div class="featured-card-image">
+            <img src="assets/projects/ordering-platform.jpg" alt="Restaurant ordering platform project presentation" />
+          </div>
+          <div class="featured-card-body">
+            <p class="featured-card-kicker">Systems Analysis &middot; UML &middot; Process Design</p>
+            <h2 class="featured-card-title">Restaurant Ordering Platform</h2>
+            <p class="featured-card-desc">
+              End-to-end information system analysis and design for a web-based restaurant ordering
+              and operations management platform. Covers the full SDLC from event decomposition and
+              use case modelling through to domain class diagrams and process mapping.
+            </p>
+            <div class="project-tags">
+              <span class="tag">UML</span>
+              <span class="tag">Use Cases</span>
+              <span class="tag">Domain Model</span>
+              <span class="tag">Process Mapping</span>
+            </div>
+            <div class="featured-card-actions">
+              <a href="projects/ordering-platform.html" aria-label="More details about the ordering platform" class="icon-btn">
+                <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
 
-  <p class="project-text">
-    The objective of the project was to analyse and redesign the operational workflow of a restaurant environment by developing a structured information system capable of supporting both front-of-house and kitchen operations. The system aimed to reduce manual order handling, improve operational visibility, and minimise service delays during peak hours.
-  </p>
+        <!-- Featured 3 – Database Normalisation (image left, text right) -->
+        <article class="featured-card">
+          <div class="featured-card-image">
+            <img src="assets/projects/db-normalisation.jpg" alt="Database design and normalisation diagram" />
+          </div>
+          <div class="featured-card-body">
+            <p class="featured-card-kicker">Database Design &middot; Normalisation &middot; EER</p>
+            <h2 class="featured-card-title">Database Normalisation</h2>
+            <p class="featured-card-desc">
+              Relational data architecture case study applying formal database modelling techniques.
+              Translates conceptual EER diagrams into fully normalised schemas, eliminating redundancy
+              and enforcing data integrity from 1NF through 3NF.
+            </p>
+            <div class="project-tags">
+              <span class="tag">EER</span>
+              <span class="tag">ER Diagrams</span>
+              <span class="tag">1NF–3NF</span>
+              <span class="tag">Data Integrity</span>
+            </div>
+            <div class="featured-card-actions">
+              <a href="projects/db-normalisation.html" aria-label="More details about database normalisation" class="icon-btn">
+                <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
 
-  <p class="project-text">
-    The analysis phase focused on identifying real operational bottlenecks such as long queues, communication gaps between staff and kitchen teams, and the lack of a centralised view of order status. Based on these findings, the system design introduced a digital ordering and workflow management solution to streamline restaurant operations.
-  </p>
-
-  <p class="project-text">
-    My contribution covered several stages of the systems analysis and design lifecycle, including:
-  </p>
-
-  <ul class="project-bullets">
-    <li>Defining the system vision and clarifying the project scope</li>
-    <li>Applying event decomposition techniques to identify external, temporal, and state-driven events</li>
-    <li>Developing use case models to represent system interactions and user behaviour</li>
-    <li>Designing domain model class diagrams to represent entities and relationships</li>
-    <li>Mapping operational processes to improve workflow visibility and service coordination</li>
-  </ul>
-
-  <div class="project-tags">
-    <span class="tag">UML</span>
-    <span class="tag">Use Cases</span>
-    <span class="tag">Process Mapping</span>
-    <span class="tag">Domain Model</span>
-  </div>
-
-</div>
-
-    <aside class="project-right">
-      <div class="project-media">
-        <!-- troca o src pela tua imagem -->
-        <img src="assets/projects/ordering-platform.jpg" alt="Ordering platform project presentation" />
       </div>
+    </section>
 
-      <div class="project-tools">
-        <h3>Tools &amp; Methods</h3>
-        <ul>
-          <li>UML Modelling</li>
-          <li>Event Decomposition</li>
-          <li>Requirements Analysis</li>
-          <li>Domain Modelling</li>
-          <li>ER Design</li>
-          <li>Process Mapping</li>
-        </ul>
+    <!-- ===== ARCHIVE SECTION ===== -->
+    <section class="archive-section" aria-label="Other projects">
+      <h2 class="archive-section-title">Other Projects</h2>
+      <p class="archive-section-sub">A few more things I have worked on.</p>
+
+      <div class="archive-grid">
+
+        <!-- BRMachine Operational Tracker -->
+        <article class="archive-card">
+          <div class="archive-folder" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"/>
+            </svg>
+          </div>
+          <h3 class="archive-card-title">BRMachine Operational Tracker</h3>
+          <p class="archive-card-desc">Structured inventory and failure-tracking framework for distributed vending and entertainment machines across multiple commercial sites.</p>
+          <div class="archive-tags">
+            <span class="tag">Operations</span>
+            <span class="tag">Inventory</span>
+            <span class="tag">Decision Logic</span>
+          </div>
+        </article>
+
       </div>
-    </aside>
-  </article>
+    </section>
 
-  <!-- Project 2 -->
-  <article class="project">
-    <div class="project-left">
+  </main>
 
-  <h2 class="project-title">
-    Database Design &amp; Normalisation - Relational Data Architecture Case Study
-  </h2>
+  <footer class="footer-pro">
+    <div class="container footer-pro-inner">
 
-    <div class="project-media project-media-mobile">
-    <img src="assets/projects/db-normalisation.jpg" alt="Database design and normalisation" />
-  </div>
+      <div class="footer-pro-grid">
+        <!-- Get in touch -->
+        <div class="footer-block">
+          <div class="footer-kicker">Get in touch</div>
+          <div class="footer-text">
+            <div class="footer-muted">Christchurch, New Zealand</div>
+          </div>
+        </div>
 
-<p class="project-lead">
-    This project focused on the design and structuring of relational database architectures using formal database modelling techniques.
-  </p>
+        <!-- Connect -->
+        <div class="footer-block">
+          <div class="footer-kicker">Connect</div>
+          <div class="footer-social">
+            <a href="mailto:luanlaguna7@gmail.com" aria-label="Email">
+              <svg viewBox="0 0 24 24" class="social-icon">
+                <path d="M3 5h18v14H3V5zm9 6L5 6.5V18h14V6.5L12 11z"/>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/luan-laguna-390032174/" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" class="social-icon">
+                <path d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.11 1 2.49 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4zM8 8h3.8v2.2h.05c.53-1 1.83-2.2 3.77-2.2 4.03 0 4.78 2.65 4.78 6.1V24h-4v-7.4c0-1.77-.03-4.05-2.47-4.05-2.47 0-2.85 1.93-2.85 3.92V24H8z"/>
+              </svg>
+            </a>
+            <a href="https://github.com/LuanLaguna" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" class="social-icon">
+                <path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.87 10.94c.58.1.79-.25.79-.56v-2.17c-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.27-1.69-1.27-1.69-1.04-.71.08-.69.08-.69 1.15.08 1.76 1.18 1.76 1.18 1.02 1.76 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.3 1.18-3.12-.12-.29-.51-1.45.11-3.03 0 0 .96-.31 3.15 1.19a10.9 10.9 0 0 1 5.73 0c2.19-1.5 3.15-1.19 3.15-1.19.62 1.58.23 2.74.11 3.03.73.82 1.18 1.86 1.18 3.12 0 4.42-2.69 5.39-5.25 5.67.41.35.77 1.04.77 2.1v3.11c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
 
-  <p class="project-text">
-    The objective was to develop robust database schemas capable of supporting complex business scenarios while maintaining data integrity, consistency, and scalability. The project involved translating conceptual models into structured relational database designs that minimise redundancy and optimise data relationships.
-  </p>
-
-  <p class="project-text">
-    The work began with conceptual modelling through Enhanced Entity-Relationship (EER) diagrams, where entities, attributes, and relationships were identified and structured to accurately represent real-world systems. These models were then converted into relational schemas suitable for implementation in relational database systems.
-  </p>
-
-  <p class="project-text">
-    A key focus of the project was the application of database normalisation principles to ensure efficient data organisation and eliminate redundancy.
-  </p>
-
-  <ul class="project-bullets">
-    <li>Development of Enhanced Entity-Relationship (EER) diagrams for complex business environments</li>
-    <li>Definition of entities, attributes, relationships, cardinalities, and participation constraints</li>
-    <li>Translation of conceptual models into relational schema structures</li>
-    <li>Identification and analysis of functional dependencies</li>
-    <li>Application of database normalisation techniques from First to Third Normal Form (1NF-3NF)</li>
-  </ul>
-
-  <div class="project-tags">
-    <span class="tag">EER</span>
-    <span class="tag">ER</span>
-    <span class="tag">1NF-3NF</span>
-    <span class="tag">Data Integrity</span>
-  </div>
-
-</div>
-
-    <aside class="project-right">
-      <div class="project-media">
-        <img src="assets/projects/db-normalisation.jpg" alt="Database design and normalisation" />
-      </div>
-
-      <div class="project-tools">
-        <h3>Tools &amp; Methods</h3>
-        <ul>
-          <li>EER Modelling</li>
-          <li>ER Diagrams</li>
-          <li>Functional Dependency Analysis</li>
-          <li>Database Normalisation</li>
-          <li>Relational Schema Design</li>
-        </ul>
-      </div>
-    </aside>
-  </article>
-
-  <!-- Project 3 -->
-  <article class="project">
-    <div class="project-left">
-
-  <h2 class="project-title">
-    Operational Inventory &amp; Failure Tracking System - BRMachine
-  </h2>
-
-    <div class="project-media project-media-mobile">
-    <img src="assets/projects/brmachine-dashboard.jpg" alt="Operational tracking dashboard concept" />
-  </div>
-
-<p class="project-lead">
-    During my experience working with entertainment and vending machines at BRMachine, I developed a structured operational framework to manage spare parts inventory and track recurring equipment failures across distributed machines.
-  </p>
-
-  <p class="project-text">
-    The business operated multiple machines installed in different commercial locations, which required continuous maintenance and replacement of mechanical and electronic components. However, the absence of a structured tracking system made it difficult to monitor recurring failures, control spare parts usage, and manage technician interventions efficiently.
-  </p>
-
-  <p class="project-text">
-    To address this, I designed a simple yet structured tracking framework aimed at improving operational visibility and maintenance planning. The system allowed the team to monitor spare parts consumption, categorise machine failures, and support operational decisions regarding repair or component replacement.
-  </p>
-
-  <ul class="project-bullets">
-    <li>Weekly tracking of spare parts usage across different machines and locations</li>
-    <li>Identification of recurring failure patterns in mechanical and electronic components</li>
-    <li>Categorisation of failure types to support maintenance prioritisation</li>
-    <li>Allocation control of parts per technician and intervention record tracking</li>
-    <li>Decision logic to evaluate repair versus replacement scenarios for cost optimisation</li>
-  </ul>
-
-  <div class="project-tags">
-    <span class="tag">Operations</span>
-    <span class="tag">Inventory</span>
-    <span class="tag">Decision Logic</span>
-  </div>
-
-</div>
-
-    <aside class="project-right">
-      <div class="project-media">
-        <img src="assets/projects/brmachine-dashboard.jpg" alt="Operational tracking dashboard concept" />
-      </div>
-
-      <div class="project-tools">
-        <h3>Tools &amp; Methods</h3>
-        <ul>
-          <li>Operational Process Design</li>
-          <li>Inventory Structuring</li>
-          <li>Failure Pattern Tracking</li>
-          <li>Workflow Coordination</li>
-          <li>Decision Logic Framework</li>
-        </ul>
-      </div>
-    </aside>
-  </article>
-
-</section>
-
- <footer class="footer-pro">
-  <div class="container footer-pro-inner">
-
-    <div class="footer-pro-grid">
-      <!-- Get in touch -->
-      <div class="footer-block">
-        <div class="footer-kicker">Get in touch</div>
-        <div class="footer-text">
-          <div class="footer-muted">Christchurch, New Zealand</div>
+        <!-- CTA -->
+        <div class="footer-cta">
+          <a class="footer-cta-btn" href="contact.html">
+            Start a conversation
+          </a>
         </div>
       </div>
 
-      <!-- Connect -->
-        <div class="footer-block">
-  <div class="footer-kicker">Connect</div>
-
-  <div class="footer-social">
-
-    <a href="mailto:luanlaguna7@gmail.com" aria-label="Email">
-      <svg viewBox="0 0 24 24" class="social-icon">
-        <path d="M3 5h18v14H3V5zm9 6L5 6.5V18h14V6.5L12 11z"/>
-      </svg>
-    </a>
-
-    <a href="https://www.linkedin.com/in/luan-laguna-390032174/" target="_blank" rel="noopener" aria-label="LinkedIn">
-
-      <svg viewBox="0 0 24 24" class="social-icon">
-        <path d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.11 1 2.49 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4zM8 8h3.8v2.2h.05c.53-1 1.83-2.2 3.77-2.2 4.03 0 4.78 2.65 4.78 6.1V24h-4v-7.4c0-1.77-.03-4.05-2.47-4.05-2.47 0-2.85 1.93-2.85 3.92V24H8z"/>
-      </svg>
-
-    </a>
-
-    <a href="https://github.com/LuanLaguna" target="_blank" rel="noopener" aria-label="GitHub">
-
-      <svg viewBox="0 0 24 24" class="social-icon">
-        <path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.87 10.94c.58.1.79-.25.79-.56v-2.17c-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.27-1.69-1.27-1.69-1.04-.71.08-.69.08-.69 1.15.08 1.76 1.18 1.76 1.18 1.02 1.76 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.3 1.18-3.12-.12-.29-.51-1.45.11-3.03 0 0 .96-.31 3.15 1.19a10.9 10.9 0 0 1 5.73 0c2.19-1.5 3.15-1.19 3.15-1.19.62 1.58.23 2.74.11 3.03.73.82 1.18 1.86 1.18 3.12 0 4.42-2.69 5.39-5.25 5.67.41.35.77 1.04.77 2.1v3.11c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/>
-      </svg>
-
-    </a>
- </div>
-  </div>
-
-      <!-- CTA -->
-      <div class="footer-cta">
-        <a class="footer-cta-btn" href="contact.html">
-          Start a conversation
-        </a>
+      <div class="footer-bottom">
+        <div class="footer-copy">&copy; 2026 Luan Laguna. All rights reserved.</div>
+        <div class="footer-tagline">Systems, data, and operations&mdash;built with clarity.</div>
       </div>
+
     </div>
+  </footer>
 
-    <div class="footer-bottom">
-      <div class="footer-copy">&copy; 2026 Luan Laguna. All rights reserved.</div>
-      <div class="footer-tagline">Systems, data, and operations&mdash;built with clarity.</div>
-    </div>
+  <button class="back-to-top" type="button" aria-label="Back to top">&#8593;</button>
 
-  </div>
-</footer>
-<button class="back-to-top" type="button" aria-label="Back to top">&#8593;</button>
-<script>
-  (function () {
-    const btn = document.querySelector(".nav-toggle");
-    const nav = document.querySelector("#site-nav");
-    if (btn && nav) {
-      btn.addEventListener("click", () => {
-        const isOpen = nav.classList.toggle("is-open");
-        btn.classList.toggle("is-active", isOpen);
-        btn.setAttribute("aria-expanded", String(isOpen));
+  <script>
+    (function () {
+      const btn = document.querySelector(".nav-toggle");
+      const nav = document.querySelector("#site-nav");
+      if (btn && nav) {
+        btn.addEventListener("click", () => {
+          const isOpen = nav.classList.toggle("is-open");
+          btn.classList.toggle("is-active", isOpen);
+          btn.setAttribute("aria-expanded", String(isOpen));
+        });
+
+        nav.addEventListener("click", (e) => {
+          if (e.target.tagName === "A" && nav.classList.contains("is-open")) {
+            nav.classList.remove("is-open");
+            btn.classList.remove("is-active");
+            btn.setAttribute("aria-expanded", "false");
+          }
+        });
+      }
+
+      const toTop = document.querySelector(".back-to-top");
+      if (!toTop) return;
+      const toggleToTop = () => {
+        toTop.classList.toggle("is-visible", window.scrollY > 260);
+      };
+      window.addEventListener("scroll", toggleToTop, { passive: true });
+      toTop.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
       });
-
-      nav.addEventListener("click", (e) => {
-        if (e.target.tagName === "A" && nav.classList.contains("is-open")) {
-          nav.classList.remove("is-open");
-          btn.classList.remove("is-active");
-          btn.setAttribute("aria-expanded", "false");
-        }
-      });
-    }
-
-    const toTop = document.querySelector(".back-to-top");
-    if (!toTop) return;
-    const toggleToTop = () => {
-      toTop.classList.toggle("is-visible", window.scrollY > 260);
-    };
-    window.addEventListener("scroll", toggleToTop, { passive: true });
-    toTop.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-    toggleToTop();
-  })();
-</script>
+      toggleToTop();
+    })();
+  </script>
 </body>
 </html>
-
-
-
-
