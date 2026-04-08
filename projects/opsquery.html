@@ -34,20 +34,87 @@
 
   <main class="container page projects-page">
 
+    <!-- Back link + hero -->
     <header class="projects-hero">
-      <a href="../projects.html" class="btn-read-more" style="margin-bottom:24px; display:inline-flex;">&larr; Back to Projects</a>
-      <p class="featured-card-kicker" style="margin-top:16px;">AI &middot; SQL &middot; Developer Tool</p>
+      <a href="../projects.html" class="btn-read-more" style="margin-bottom: 28px;">&larr; Back to Projects</a>
+      <p class="featured-card-kicker" style="margin-top: 20px;">AI &middot; SQL &middot; Developer Tool</p>
       <h1 class="projects-title">OpsQuery</h1>
-      <p class="projects-subtitle">AI-powered natural-language-to-SQL assistant</p>
+      <p class="projects-subtitle">AI-powered natural-language-to-SQL assistant for operational teams.</p>
+      <div style="margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap;">
+        <a href="https://github.com/LuanLaguna/opsquery" target="_blank" rel="noopener" class="icon-btn" aria-label="View OpsQuery on GitHub" style="width: auto; padding: 0 16px; gap: 8px; font-weight: 700; font-size: .92rem;">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor" style="width:18px;height:18px;flex-shrink:0;"><path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.87 10.94c.58.1.79-.25.79-.56v-2.17c-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.27-1.69-1.27-1.69-1.04-.71.08-.69.08-.69 1.15.08 1.76 1.18 1.76 1.18 1.02 1.76 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.3 1.18-3.12-.12-.29-.51-1.45.11-3.03 0 0 .96-.31 3.15 1.19a10.9 10.9 0 0 1 5.73 0c2.19-1.5 3.15-1.19 3.15-1.19.62 1.58.23 2.74.11 3.03.73.82 1.18 1.86 1.18 3.12 0 4.42-2.69 5.39-5.25 5.67.41.35.77 1.04.77 2.1v3.11c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+          View on GitHub
+        </a>
+      </div>
     </header>
 
-    <!-- Content placeholder – fill this in when ready -->
-    <section style="padding: 32px 0 60px; border-top: 1px solid var(--line); color: var(--muted); font-size: 1rem;">
-      <p>Project details coming soon. In the meantime, view the code on GitHub below.</p>
-      <a href="https://github.com/LuanLaguna/opsquery" target="_blank" rel="noopener" class="btn-read-more" style="margin-top:16px; display:inline-flex;">
-        View on GitHub &rarr;
-      </a>
-    </section>
+    <!-- Project write-up -->
+    <div class="opsquery-body">
+
+      <section class="opsquery-section">
+        <h2 class="opsquery-section-title">The Problem</h2>
+        <p class="opsquery-text">
+          Operations managers in dairy processing businesses need daily answers about farm performance, milk collection,
+          quality compliance, and customer orders. Without technical skills, they depend on developers or wait for manual
+          reports — slowing down decisions that matter.
+        </p>
+      </section>
+
+      <section class="opsquery-section">
+        <h2 class="opsquery-section-title">What OpsQuery Does</h2>
+        <p class="opsquery-text">
+          OpsQuery is a tool built for Canterbury Dairy Co, a fictional dairy processing company in Canterbury, New Zealand.
+          It allows non-technical staff to ask business questions in plain English and receive instant answers from a live
+          operational database — no SQL or coding knowledge required.
+        </p>
+        <p class="opsquery-text">
+          Instead of waiting for a report, a manager simply types:
+        </p>
+        <blockquote class="opsquery-quote">
+          "Which farms failed quality tests this week?"
+        </blockquote>
+        <p class="opsquery-text">
+          — and gets the answer immediately.
+        </p>
+        <p class="opsquery-text">
+          Other questions the tool can answer include things like which driver collected the most milk, total volumes by
+          route, customer locations, and which farms hold organic certification.
+        </p>
+      </section>
+
+      <section class="opsquery-section">
+        <h2 class="opsquery-section-title">Why It Matters</h2>
+        <p class="opsquery-text">
+          This eliminates a real bottleneck in data-driven operations: the dependency on technical staff for routine
+          information requests. In industries like dairy processing, logistics, and field operations, faster access to
+          operational data directly supports better and quicker decision-making.
+        </p>
+      </section>
+
+      <section class="opsquery-section">
+        <h2 class="opsquery-section-title">What I Built</h2>
+        <p class="opsquery-text">
+          I designed and built OpsQuery end-to-end — including a seven-table relational database modelling a Canterbury
+          dairy supply chain, an AI integration that translates plain English into database queries, a security layer that
+          prevents misuse, and a clean interface any staff member can use. The project is grounded in my background in
+          operations management, where slow access to performance data was a genuine daily challenge.
+        </p>
+      </section>
+
+      <section class="opsquery-section">
+        <h2 class="opsquery-section-title">Skills Demonstrated</h2>
+        <div class="project-tags" style="padding-top: 4px;">
+          <span class="tag">Database Design</span>
+          <span class="tag">SQL</span>
+          <span class="tag">AI API Integration</span>
+          <span class="tag">Security Implementation</span>
+          <span class="tag">Business Systems Thinking</span>
+          <span class="tag">Python</span>
+          <span class="tag">Streamlit</span>
+        </div>
+      </section>
+
+    </div>
 
   </main>
 

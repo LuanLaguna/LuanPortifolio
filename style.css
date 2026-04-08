@@ -1098,21 +1098,21 @@ h1{
   padding: 0 18px;
   height: 40px;
   border-radius: 10px;
-  border: 1px solid var(--line);
-  background: #fff;
-  color: var(--text);
+  border: 1px solid rgba(29,78,216,.35);
+  background: rgba(29,78,216,.08);
+  color: #1d4ed8;
   text-decoration: none;
   font-weight: 700;
   font-size: .92rem;
-  transition: background .12s ease, color .12s ease, transform .12s ease, box-shadow .12s ease;
+  transition: background .12s ease, color .12s ease, transform .12s ease, box-shadow .12s ease, border-color .12s ease;
 }
 
 .btn-read-more:hover{
-  background: var(--btn);
-  color: var(--btnText);
-  border-color: var(--btn);
+  background: #1d4ed8;
+  color: #fff;
+  border-color: #1d4ed8;
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(15,23,42,0.14);
+  box-shadow: 0 6px 16px rgba(29,78,216,0.22);
 }
 
 /* Archive section */
@@ -1189,6 +1189,49 @@ h1{
   flex-wrap: wrap;
   gap: 8px;
   margin-top: 18px;
+}
+
+/* Project detail page */
+.opsquery-body{
+  max-width: 72ch;
+  padding: 40px 0 70px;
+}
+
+.opsquery-section{
+  padding: 28px 0;
+  border-top: 1px solid var(--line);
+}
+
+.opsquery-section:first-child{
+  border-top: none;
+  padding-top: 10px;
+}
+
+.opsquery-section-title{
+  margin: 0 0 14px;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  letter-spacing: -0.01em;
+}
+
+.opsquery-text{
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.opsquery-text:last-child{ margin-bottom: 0; }
+
+.opsquery-quote{
+  margin: 16px 0;
+  padding: 14px 20px;
+  border-left: 3px solid #1d4ed8;
+  background: rgba(29,78,216,.05);
+  border-radius: 0 10px 10px 0;
+  color: var(--text);
+  font-weight: 700;
+  font-size: 1.05rem;
+  font-style: normal;
 }
 
 /* Responsive – featured cards */
