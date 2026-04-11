@@ -137,7 +137,7 @@ h1{
 
 .footer-pro-grid{
   display: grid;
-  grid-template-columns: 1.2fr 0.9fr auto;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 22px;
   align-items: start;
   padding: 8px 0 18px;
@@ -262,15 +262,17 @@ h1{
   width:auto;
 }
 
-/* Keep "Connect" title and icons perfectly aligned */
-.footer-pro-grid > .footer-block:nth-of-type(2){
-  display: grid;
-  justify-items: start;
+/* Footer column alignment */
+.footer-block{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.footer-pro-grid > .footer-block:nth-of-type(2) .footer-social{
-  margin-top: 2px;
-  padding-left: 0;
+.footer-cta{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
 }
 
 .social-icon{
@@ -987,6 +989,164 @@ h1{
   }
 }
 /* =========================
+   Miro-style Project List
+   ========================= */
+
+.miro-projects{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+}
+
+.miro-item{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  padding: 72px 0;
+  border-top: 1px solid var(--line);
+  align-items: center;
+}
+
+.miro-item:last-child{ border-bottom: 1px solid var(--line); }
+
+/* Flip: visual LEFT, text RIGHT */
+.miro-flip .miro-text{ order: 2; }
+.miro-flip .miro-visual{ order: 1; }
+
+.miro-title{
+  margin: 0 0 14px;
+  font-size: clamp(1.5rem, 2.4vw, 2rem);
+  letter-spacing: -0.02em;
+  font-weight: 800;
+}
+
+.miro-desc{
+  margin: 0 0 26px;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.75;
+  max-width: 52ch;
+}
+
+.miro-actions{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.miro-btn{
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 24px;
+  border-radius: 999px;
+  background: #1d4ed8;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: .92rem;
+  border: 1px solid #1d4ed8;
+  transition: filter .14s ease, transform .14s ease, box-shadow .14s ease;
+}
+
+.miro-btn:hover{
+  filter: brightness(.88);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(29,78,216,.28);
+}
+
+.miro-meta{
+  font-size: .76rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* Laptop mockup */
+.mockup-wrap{
+  background: #e8f4f8;
+  border-radius: 20px;
+  padding: 28px 24px 0;
+  overflow: hidden;
+}
+
+.laptop-frame{
+  background: #1e2936;
+  border-radius: 10px 10px 4px 4px;
+  padding: 8px 8px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+
+.laptop-screen{
+  border-radius: 4px 4px 0 0;
+  overflow: hidden;
+  background: #0f1723;
+  line-height: 0;
+}
+
+.laptop-screen img{
+  width: 100%;
+  display: block;
+  max-height: 240px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.laptop-placeholder{
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  background: #111827;
+}
+
+.laptop-chin{
+  height: 16px;
+  background: #1e2936;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.laptop-chin-cam{
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #2d3e52;
+}
+
+.laptop-keyboard{
+  background: linear-gradient(to bottom, #c5cdd8, #d8dfe7);
+  height: 16px;
+  margin: 0 -24px;
+  border-radius: 0 0 0 0;
+}
+
+/* Responsive – miro layout */
+@media (max-width: 900px){
+  .miro-item{
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding: 52px 0;
+  }
+
+  .miro-flip .miro-text{ order: 1; }
+  .miro-flip .miro-visual{ order: 2; }
+
+  .miro-desc{ max-width: 100%; }
+
+  .laptop-screen img{ max-height: 200px; }
+  .laptop-placeholder{ height: 160px; }
+}
+
+/* =========================
    Projects Page – Redesign
    ========================= */
 
@@ -1192,9 +1352,66 @@ h1{
 }
 
 /* Project detail page */
+.detail-hero{
+  text-align: center;
+  padding: 20px 0 36px;
+  position: relative;
+}
+
+.detail-back{
+  position: absolute;
+  left: 0;
+  top: 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: .92rem;
+  transition: color .12s ease;
+}
+
+.detail-back:hover{ color: var(--text); }
+
+.detail-title{
+  margin: 0 0 6px;
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.detail-sub{
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.detail-mockup{
+  margin: 0 0 52px;
+}
+
+.detail-mockup .mockup-wrap{
+  padding: 32px 28px 0;
+}
+
+.detail-mockup .laptop-screen img{
+  max-height: 420px;
+}
+
+.detail-mockup .laptop-placeholder{
+  height: 320px;
+  font-size: 1.25rem;
+}
+
+.detail-mockup .laptop-keyboard{
+  height: 20px;
+}
+
 .opsquery-body{
   max-width: 72ch;
-  padding: 40px 0 70px;
+  padding: 0 0 70px;
+  margin: 0 auto;
 }
 
 .opsquery-section{
@@ -1221,6 +1438,35 @@ h1{
 }
 
 .opsquery-text:last-child{ margin-bottom: 0; }
+
+.opsquery-stack{
+  display: grid;
+  gap: 0;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  margin-top: 6px;
+}
+
+.stack-row{
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  padding: 12px 18px;
+  border-top: 1px solid var(--line);
+  font-size: .97rem;
+}
+
+.stack-row:first-child{ border-top: none; }
+
+.stack-label{
+  font-weight: 800;
+  color: var(--text);
+}
+
+.stack-value{
+  color: var(--muted);
+  font-weight: 600;
+}
 
 .opsquery-quote{
   margin: 16px 0;
@@ -1745,14 +1991,14 @@ h1{
   .project-media-mobile{ display: none; }
   .project-right .project-media{ display: block; }
 
-  /* Footer: avoid centered mobile stack on tablets */
+  /* Footer: 3 columns on tablets */
   .footer-pro-grid{
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-items: start;
     text-align: left;
   }
-  .footer-block{ text-align: left; }
-  .footer-cta{ justify-content: flex-start; }
+  .footer-block{ text-align: left; align-items: flex-start; }
+  .footer-cta{ justify-content: flex-end; }
 
   /* Contact form/details: avoid overly stacked tablet view */
   .contact-grid{ grid-template-columns: 1fr 1fr; }

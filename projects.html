@@ -42,94 +42,93 @@
     </header>
 
     <!-- ===== FEATURED PROJECTS ===== -->
-    <section aria-label="Featured projects">
-      <div class="featured-cards">
+    <section class="miro-projects" aria-label="Featured projects">
 
-        <!-- Featured 1 – OpsQuery (image left, text right) -->
-        <article class="featured-card">
-          <div class="featured-card-image">
-            <img src="assets/projects/opsquery.jpg" alt="OpsQuery AI SQL Assistant screenshot" />
+      <!-- Project 1: OpsQuery — text LEFT, image RIGHT -->
+      <article class="miro-item">
+        <div class="miro-text">
+          <h2 class="miro-title">OpsQuery</h2>
+          <p class="miro-desc">
+            An AI-powered natural language to SQL assistant built for Canterbury Dairy Co.
+            Non-technical staff — operations managers and logistics coordinators — ask business
+            questions in plain English and receive instant answers from a live operational database.
+            No SQL knowledge required.
+          </p>
+          <div class="miro-actions">
+            <a href="projects/opsquery.html" class="miro-btn">More Info &rarr;</a>
+            <a href="https://github.com/LuanLaguna/opsquery" target="_blank" rel="noopener" aria-label="View OpsQuery on GitHub" class="icon-btn">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.87 10.94c.58.1.79-.25.79-.56v-2.17c-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.27-1.69-1.27-1.69-1.04-.71.08-.69.08-.69 1.15.08 1.76 1.18 1.76 1.18 1.02 1.76 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.3 1.18-3.12-.12-.29-.51-1.45.11-3.03 0 0 .96-.31 3.15 1.19a10.9 10.9 0 0 1 5.73 0c2.19-1.5 3.15-1.19 3.15-1.19.62 1.58.23 2.74.11 3.03.73.82 1.18 1.86 1.18 3.12 0 4.42-2.69 5.39-5.25 5.67.41.35.77 1.04.77 2.1v3.11c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+            </a>
           </div>
-          <div class="featured-card-body">
-            <p class="featured-card-kicker">AI &middot; SQL &middot; Developer Tool</p>
-            <h2 class="featured-card-title">OpsQuery — AI SQL Assistant</h2>
-            <p class="featured-card-desc">
-              A natural-language-to-SQL tool that lets users query databases using plain English.
-              Built to reduce friction in data retrieval for non-technical stakeholders and speed up
-              analytical workflows across operations teams.
-            </p>
-            <div class="project-tags">
-              <span class="tag">Python</span>
-              <span class="tag">SQL</span>
-              <span class="tag">LLM</span>
-              <span class="tag">FastAPI</span>
+          <div class="miro-meta">PYTHON &middot; POSTGRESQL &middot; STREAMLIT &middot; AI &nbsp;&nbsp;|&nbsp;&nbsp; 2025</div>
+        </div>
+        <div class="miro-visual">
+          <div class="mockup-wrap">
+            <div class="laptop-frame">
+              <div class="laptop-screen laptop-placeholder">
+                <span>OpsQuery</span>
+              </div>
+              <div class="laptop-chin"><div class="laptop-chin-cam"></div></div>
             </div>
-            <div class="featured-card-actions">
-              <!-- GitHub icon button -->
-              <a href="https://github.com/LuanLaguna/opsquery" target="_blank" rel="noopener" aria-label="View OpsQuery on GitHub" class="icon-btn">
-                <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.87 10.94c.58.1.79-.25.79-.56v-2.17c-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.27-1.69-1.27-1.69-1.04-.71.08-.69.08-.69 1.15.08 1.76 1.18 1.76 1.18 1.02 1.76 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.3 1.18-3.12-.12-.29-.51-1.45.11-3.03 0 0 .96-.31 3.15 1.19a10.9 10.9 0 0 1 5.73 0c2.19-1.5 3.15-1.19 3.15-1.19.62 1.58.23 2.74.11 3.03.73.82 1.18 1.86 1.18 3.12 0 4.42-2.69 5.39-5.25 5.67.41.35.77 1.04.77 2.1v3.11c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
-              </a>
-              <!-- Read more text button -->
-              <a href="projects/opsquery.html" class="btn-read-more">Read more &rarr;</a>
-            </div>
+            <div class="laptop-keyboard"></div>
           </div>
-        </article>
+        </div>
+      </article>
 
-        <!-- Featured 2 – Restaurant Ordering Platform (image right, text left) -->
-        <article class="featured-card reverse">
-          <div class="featured-card-image">
-            <img src="assets/projects/ordering-platform.jpg" alt="Restaurant ordering platform project presentation" />
-          </div>
-          <div class="featured-card-body">
-            <p class="featured-card-kicker">Systems Analysis &middot; UML &middot; Process Design</p>
-            <h2 class="featured-card-title">Restaurant Ordering Platform</h2>
-            <p class="featured-card-desc">
-              End-to-end information system analysis and design for a web-based restaurant ordering
-              and operations management platform. Covers the full SDLC from event decomposition and
-              use case modelling through to domain class diagrams and process mapping.
-            </p>
-            <div class="project-tags">
-              <span class="tag">UML</span>
-              <span class="tag">Use Cases</span>
-              <span class="tag">Domain Model</span>
-              <span class="tag">Process Mapping</span>
+      <!-- Project 2: Restaurant Ordering Platform — image LEFT, text RIGHT -->
+      <article class="miro-item miro-flip">
+        <div class="miro-visual">
+          <div class="mockup-wrap">
+            <div class="laptop-frame">
+              <div class="laptop-screen">
+                <img src="assets/projects/ordering-platform.jpg" alt="Restaurant ordering platform" />
+              </div>
+              <div class="laptop-chin"><div class="laptop-chin-cam"></div></div>
             </div>
-            <div class="featured-card-actions">
-              <a href="projects/ordering-platform.html" aria-label="More details about the ordering platform" class="icon-btn">
-                <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-            </div>
+            <div class="laptop-keyboard"></div>
           </div>
-        </article>
+        </div>
+        <div class="miro-text">
+          <h2 class="miro-title">Restaurant Ordering Platform</h2>
+          <p class="miro-desc">
+            End-to-end information system analysis and design for a web-based restaurant ordering and
+            operations management platform. Covers the full SDLC — from event decomposition and use
+            case modelling through to domain class diagrams and process mapping.
+          </p>
+          <div class="miro-actions">
+            <a href="projects/ordering-platform.html" class="miro-btn">More Info &rarr;</a>
+          </div>
+          <div class="miro-meta">UML &middot; USE CASES &middot; PROCESS MAPPING &middot; DOMAIN MODEL &nbsp;&nbsp;|&nbsp;&nbsp; 2024</div>
+        </div>
+      </article>
 
-        <!-- Featured 3 – Database Normalisation (image left, text right) -->
-        <article class="featured-card">
-          <div class="featured-card-image">
-            <img src="assets/projects/db-normalisation.jpg" alt="Database design and normalisation diagram" />
+      <!-- Project 3: Database Normalisation — text LEFT, image RIGHT -->
+      <article class="miro-item">
+        <div class="miro-text">
+          <h2 class="miro-title">Database Normalisation</h2>
+          <p class="miro-desc">
+            Relational data architecture case study applying formal database modelling techniques.
+            Translates conceptual EER diagrams into fully normalised schemas, eliminating redundancy
+            and enforcing data integrity from First Normal Form through Third Normal Form.
+          </p>
+          <div class="miro-actions">
+            <a href="projects/db-normalisation.html" class="miro-btn">More Info &rarr;</a>
           </div>
-          <div class="featured-card-body">
-            <p class="featured-card-kicker">Database Design &middot; Normalisation &middot; EER</p>
-            <h2 class="featured-card-title">Database Normalisation</h2>
-            <p class="featured-card-desc">
-              Relational data architecture case study applying formal database modelling techniques.
-              Translates conceptual EER diagrams into fully normalised schemas, eliminating redundancy
-              and enforcing data integrity from 1NF through 3NF.
-            </p>
-            <div class="project-tags">
-              <span class="tag">EER</span>
-              <span class="tag">ER Diagrams</span>
-              <span class="tag">1NF–3NF</span>
-              <span class="tag">Data Integrity</span>
+          <div class="miro-meta">EER &middot; ER DIAGRAMS &middot; 1NF&ndash;3NF &middot; DATA INTEGRITY &nbsp;&nbsp;|&nbsp;&nbsp; 2024</div>
+        </div>
+        <div class="miro-visual">
+          <div class="mockup-wrap">
+            <div class="laptop-frame">
+              <div class="laptop-screen">
+                <img src="assets/projects/db-normalisation.jpg" alt="Database normalisation diagram" />
+              </div>
+              <div class="laptop-chin"><div class="laptop-chin-cam"></div></div>
             </div>
-            <div class="featured-card-actions">
-              <a href="projects/db-normalisation.html" aria-label="More details about database normalisation" class="icon-btn">
-                <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-            </div>
+            <div class="laptop-keyboard"></div>
           </div>
-        </article>
+        </div>
+      </article>
 
-      </div>
     </section>
 
     <!-- ===== ARCHIVE SECTION ===== -->
@@ -177,28 +176,20 @@
           <div class="footer-kicker">Connect</div>
           <div class="footer-social">
             <a href="mailto:luanlaguna7@gmail.com" aria-label="Email">
-              <svg viewBox="0 0 24 24" class="social-icon">
-                <path d="M3 5h18v14H3V5zm9 6L5 6.5V18h14V6.5L12 11z"/>
-              </svg>
+              <svg viewBox="0 0 24 24" class="social-icon"><path d="M3 5h18v14H3V5zm9 6L5 6.5V18h14V6.5L12 11z"/></svg>
             </a>
             <a href="https://www.linkedin.com/in/luan-laguna-390032174/" target="_blank" rel="noopener" aria-label="LinkedIn">
-              <svg viewBox="0 0 24 24" class="social-icon">
-                <path d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.11 1 2.49 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4zM8 8h3.8v2.2h.05c.53-1 1.83-2.2 3.77-2.2 4.03 0 4.78 2.65 4.78 6.1V24h-4v-7.4c0-1.77-.03-4.05-2.47-4.05-2.47 0-2.85 1.93-2.85 3.92V24H8z"/>
-              </svg>
+              <svg viewBox="0 0 24 24" class="social-icon"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.11 1 2.49 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4zM8 8h3.8v2.2h.05c.53-1 1.83-2.2 3.77-2.2 4.03 0 4.78 2.65 4.78 6.1V24h-4v-7.4c0-1.77-.03-4.05-2.47-4.05-2.47 0-2.85 1.93-2.85 3.92V24H8z"/></svg>
             </a>
             <a href="https://github.com/LuanLaguna" target="_blank" rel="noopener" aria-label="GitHub">
-              <svg viewBox="0 0 24 24" class="social-icon">
-                <path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.87 10.94c.58.1.79-.25.79-.56v-2.17c-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.27-1.69-1.27-1.69-1.04-.71.08-.69.08-.69 1.15.08 1.76 1.18 1.76 1.18 1.02 1.76 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.3 1.18-3.12-.12-.29-.51-1.45.11-3.03 0 0 .96-.31 3.15 1.19a10.9 10.9 0 0 1 5.73 0c2.19-1.5 3.15-1.19 3.15-1.19.62 1.58.23 2.74.11 3.03.73.82 1.18 1.86 1.18 3.12 0 4.42-2.69 5.39-5.25 5.67.41.35.77 1.04.77 2.1v3.11c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/>
-              </svg>
+              <svg viewBox="0 0 24 24" class="social-icon"><path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.87 10.94c.58.1.79-.25.79-.56v-2.17c-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.27-1.69-1.27-1.69-1.04-.71.08-.69.08-.69 1.15.08 1.76 1.18 1.76 1.18 1.02 1.76 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.3 1.18-3.12-.12-.29-.51-1.45.11-3.03 0 0 .96-.31 3.15 1.19a10.9 10.9 0 0 1 5.73 0c2.19-1.5 3.15-1.19 3.15-1.19.62 1.58.23 2.74.11 3.03.73.82 1.18 1.86 1.18 3.12 0 4.42-2.69 5.39-5.25 5.67.41.35.77 1.04.77 2.1v3.11c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
             </a>
           </div>
         </div>
 
         <!-- CTA -->
         <div class="footer-cta">
-          <a class="footer-cta-btn" href="contact.html">
-            Start a conversation
-          </a>
+          <a class="footer-cta-btn" href="contact.html">Start a conversation</a>
         </div>
       </div>
 
@@ -222,7 +213,6 @@
           btn.classList.toggle("is-active", isOpen);
           btn.setAttribute("aria-expanded", String(isOpen));
         });
-
         nav.addEventListener("click", (e) => {
           if (e.target.tagName === "A" && nav.classList.contains("is-open")) {
             nav.classList.remove("is-open");
@@ -231,16 +221,11 @@
           }
         });
       }
-
       const toTop = document.querySelector(".back-to-top");
       if (!toTop) return;
-      const toggleToTop = () => {
-        toTop.classList.toggle("is-visible", window.scrollY > 260);
-      };
+      const toggleToTop = () => { toTop.classList.toggle("is-visible", window.scrollY > 260); };
       window.addEventListener("scroll", toggleToTop, { passive: true });
-      toTop.addEventListener("click", () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      });
+      toTop.addEventListener("click", () => { window.scrollTo({ top: 0, behavior: "smooth" }); });
       toggleToTop();
     })();
   </script>
