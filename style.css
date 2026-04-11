@@ -2005,5 +2005,313 @@ h1{
   .form-row.two{ grid-template-columns: 1fr 1fr; }
 }
 
+/* =========================================
+   PROJECT IMAGE CONTAINER (no device frame)
+   ========================================= */
+.proj-img-wrap{
+  background: #e8f4f8;
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  position: relative;
+}
+
+.proj-img-wrap img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.proj-img-placeholder{
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #c8dde8;
+  color: #5a8a9f;
+  font-weight: 700;
+  font-size: .88rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 16px;
+}
+
+/* =========================================
+   ARCHIVE CARD — icon + read-more
+   ========================================= */
+.archive-icon{
+  margin-bottom: 14px;
+  color: var(--muted);
+}
+
+.archive-icon svg{
+  width: 32px;
+  height: 32px;
+  stroke: currentColor;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
+  transition: transform 0.3s ease, stroke 0.3s ease;
+}
+
+.archive-card:hover .archive-icon svg{
+  transform: scale(1.1);
+  stroke: #1d4ed8;
+}
+
+.archive-card{
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.archive-card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+}
+
+.archive-read-more{
+  margin-top: 14px;
+  display: inline-flex;
+  align-items: center;
+  font-size: .88rem;
+  font-weight: 700;
+  color: #1d4ed8;
+  text-decoration: none;
+  transition: text-decoration 0.1s ease;
+}
+
+.archive-read-more:hover{
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* =========================================
+   DETAIL PAGE LAYOUT
+   ========================================= */
+.detail-hero{
+  padding: 24px 0 40px;
+}
+
+.detail-hero-nav{
+  margin-bottom: 28px;
+}
+
+.detail-back{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: .92rem;
+  transition: color .12s ease;
+}
+
+.detail-back:hover{ color: var(--text); }
+
+.detail-back svg{
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+
+.detail-title-wrap{
+  text-align: center;
+  padding: 0 0 10px;
+}
+
+.detail-kicker{
+  margin: 0 0 10px;
+  color: var(--muted);
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-size: .78rem;
+}
+
+.detail-title{
+  margin: 0 0 10px;
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.detail-sub{
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.detail-image-section{
+  margin-bottom: 52px;
+}
+
+.detail-image-main{
+  background: #e8f4f8;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.detail-image-main img{
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: top center;
+  max-height: 480px;
+}
+
+.detail-image-placeholder{
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #c8dde8;
+  color: #5a8a9f;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  font-size: 1rem;
+  text-align: center;
+  padding: 20px;
+}
+
+.detail-image-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.detail-body{
+  max-width: 72ch;
+  margin: 0 auto;
+  padding: 0 0 70px;
+}
+
+/* =========================================
+   ASSET PLACEHOLDERS
+   ========================================= */
+.asset-placeholders{
+  margin-top: 52px;
+  padding-top: 36px;
+  border-top: 1px solid var(--line);
+}
+
+.asset-placeholder-title{
+  margin: 0 0 20px;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  letter-spacing: -0.01em;
+}
+
+.asset-placeholder-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.asset-placeholder{
+  min-height: 200px;
+  background: #f8fafc;
+  border: 2px dashed #cbd5e1;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 20px;
+  color: var(--muted);
+  font-size: .9rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.asset-placeholder svg{
+  opacity: 0.3;
+  flex-shrink: 0;
+}
+
+/* =========================================
+   MIRO ITEM HOVER EFFECTS
+   ========================================= */
+.miro-item .proj-img-wrap img{
+  transition: transform 0.3s ease;
+}
+
+.miro-item:hover .proj-img-wrap img{
+  transform: scale(1.03);
+}
+
+/* =========================================
+   PAGE ANIMATIONS
+   ========================================= */
+
+/* Entry / exit transitions */
+@keyframes pageFadeIn  { from { opacity: 0; } to { opacity: 1; } }
+@keyframes pageFadeOut { from { opacity: 1; } to { opacity: 0; } }
+
+body{ animation: pageFadeIn 0.3s ease-out; }
+
+body.page-exit{
+  animation: pageFadeOut 0.3s ease-out forwards;
+  pointer-events: none;
+}
+
+/* Scroll reveal */
+.js-loaded .reveal{
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.js-loaded .reveal.visible{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Particle canvas */
+.projects-hero{ position: relative; }
+
+#particle-canvas{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.projects-hero > *:not(#particle-canvas){ position: relative; z-index: 1; }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce){
+  body, body.page-exit{ animation: none !important; }
+  .js-loaded .reveal{
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .miro-item:hover .proj-img-wrap img{ transform: none; }
+  .archive-card:hover{ transform: none; }
+  .archive-card:hover .archive-icon svg{ transform: none; }
+}
+
+/* Responsive */
+@media (max-width: 740px){
+  .asset-placeholder-grid{ grid-template-columns: 1fr; }
+  .detail-image-grid{ grid-template-columns: 1fr; }
+}
 
 

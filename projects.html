@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-GKTQG36YTF"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -34,9 +33,11 @@
 
   <main class="container page projects-page">
 
+    <!-- Hero with particle canvas -->
     <header class="projects-hero">
-      <h1 class="projects-title">Projects</h1>
-      <p class="projects-subtitle">
+      <canvas id="particle-canvas" aria-hidden="true"></canvas>
+      <h1 class="projects-title reveal">Projects</h1>
+      <p class="projects-subtitle reveal">
         Selected work showcasing database modelling, process design, and operations analytics.
       </p>
     </header>
@@ -44,15 +45,14 @@
     <!-- ===== FEATURED PROJECTS ===== -->
     <section class="miro-projects" aria-label="Featured projects">
 
-      <!-- Project 1: OpsQuery — text LEFT, image RIGHT -->
+      <!-- 1: OpsQuery — text LEFT, image RIGHT -->
       <article class="miro-item">
-        <div class="miro-text">
+        <div class="miro-text reveal">
           <h2 class="miro-title">OpsQuery</h2>
           <p class="miro-desc">
             An AI-powered natural language to SQL assistant built for Canterbury Dairy Co.
-            Non-technical staff — operations managers and logistics coordinators — ask business
-            questions in plain English and receive instant answers from a live operational database.
-            No SQL knowledge required.
+            Non-technical staff ask business questions in plain English and receive instant answers
+            from a live operational database — no SQL or coding knowledge required.
           </p>
           <div class="miro-actions">
             <a href="projects/opsquery.html" class="miro-btn">More Info &rarr;</a>
@@ -62,87 +62,70 @@
           </div>
           <div class="miro-meta">PYTHON &middot; POSTGRESQL &middot; STREAMLIT &middot; AI &nbsp;&nbsp;|&nbsp;&nbsp; 2025</div>
         </div>
-        <div class="miro-visual">
-          <div class="mockup-wrap">
-            <div class="laptop-frame">
-              <div class="laptop-screen laptop-placeholder">
-                <span>OpsQuery</span>
-              </div>
-              <div class="laptop-chin"><div class="laptop-chin-cam"></div></div>
-            </div>
-            <div class="laptop-keyboard"></div>
+        <div class="miro-visual reveal">
+          <div class="proj-img-wrap">
+            <div class="proj-img-placeholder">OpsQuery &mdash; screenshot coming soon</div>
           </div>
         </div>
       </article>
 
-      <!-- Project 2: Restaurant Ordering Platform — image LEFT, text RIGHT -->
+      <!-- 2: Restaurant Platform — image LEFT, text RIGHT -->
       <article class="miro-item miro-flip">
-        <div class="miro-visual">
-          <div class="mockup-wrap">
-            <div class="laptop-frame">
-              <div class="laptop-screen">
-                <img src="assets/projects/ordering-platform.jpg" alt="Restaurant ordering platform" />
-              </div>
-              <div class="laptop-chin"><div class="laptop-chin-cam"></div></div>
-            </div>
-            <div class="laptop-keyboard"></div>
-          </div>
-        </div>
-        <div class="miro-text">
+        <div class="miro-text reveal">
           <h2 class="miro-title">Restaurant Ordering Platform</h2>
           <p class="miro-desc">
-            End-to-end information system analysis and design for a web-based restaurant ordering and
-            operations management platform. Covers the full SDLC — from event decomposition and use
-            case modelling through to domain class diagrams and process mapping.
+            A web-based ordering and management system designed for peak-hour operations in
+            hospitality. Covers the full SDLC — from event decomposition and use case modelling
+            through to domain class diagrams and design-level sequence diagrams.
           </p>
           <div class="miro-actions">
-            <a href="projects/ordering-platform.html" class="miro-btn">More Info &rarr;</a>
+            <a href="projects/restaurant-platform.html" class="miro-btn">More Info &rarr;</a>
           </div>
-          <div class="miro-meta">UML &middot; USE CASES &middot; PROCESS MAPPING &middot; DOMAIN MODEL &nbsp;&nbsp;|&nbsp;&nbsp; 2024</div>
+          <div class="miro-meta">UML &middot; SYSTEMS ANALYSIS &middot; DATABASE DESIGN &middot; OOP &nbsp;&nbsp;|&nbsp;&nbsp; 2026</div>
+        </div>
+        <div class="miro-visual reveal">
+          <div class="proj-img-wrap">
+            <img src="assets/projects/ordering-platform.jpg" alt="Restaurant ordering platform project diagram" />
+          </div>
         </div>
       </article>
 
-      <!-- Project 3: Database Normalisation — text LEFT, image RIGHT -->
+      <!-- 3: Database Normalisation — text LEFT, image RIGHT -->
       <article class="miro-item">
-        <div class="miro-text">
+        <div class="miro-text reveal">
           <h2 class="miro-title">Database Normalisation</h2>
           <p class="miro-desc">
-            Relational data architecture case study applying formal database modelling techniques.
-            Translates conceptual EER diagrams into fully normalised schemas, eliminating redundancy
-            and enforcing data integrity from First Normal Form through Third Normal Form.
+            Relational database design project applying normalisation theory to a real operational
+            scenario. Translates Enhanced Entity-Relationship diagrams into fully normalised schemas,
+            eliminating redundancy and enforcing data integrity from 1NF through 3NF.
           </p>
           <div class="miro-actions">
-            <a href="projects/db-normalisation.html" class="miro-btn">More Info &rarr;</a>
+            <a href="projects/database-normalisation.html" class="miro-btn">More Info &rarr;</a>
           </div>
-          <div class="miro-meta">EER &middot; ER DIAGRAMS &middot; 1NF&ndash;3NF &middot; DATA INTEGRITY &nbsp;&nbsp;|&nbsp;&nbsp; 2024</div>
+          <div class="miro-meta">SQL &middot; ERD &middot; POSTGRESQL &middot; DATA MODELLING &nbsp;&nbsp;|&nbsp;&nbsp; 2025</div>
         </div>
-        <div class="miro-visual">
-          <div class="mockup-wrap">
-            <div class="laptop-frame">
-              <div class="laptop-screen">
-                <img src="assets/projects/db-normalisation.jpg" alt="Database normalisation diagram" />
-              </div>
-              <div class="laptop-chin"><div class="laptop-chin-cam"></div></div>
-            </div>
-            <div class="laptop-keyboard"></div>
+        <div class="miro-visual reveal">
+          <div class="proj-img-wrap">
+            <img src="assets/projects/db-normalisation.jpg" alt="Database normalisation diagram" />
           </div>
         </div>
       </article>
 
     </section>
 
-    <!-- ===== ARCHIVE SECTION ===== -->
+    <!-- ===== OTHER PROJECTS ===== -->
     <section class="archive-section" aria-label="Other projects">
-      <h2 class="archive-section-title">Other Projects</h2>
-      <p class="archive-section-sub">A few more things I have worked on.</p>
+      <h2 class="archive-section-title reveal">Other Projects</h2>
+      <p class="archive-section-sub reveal">A few more things I have worked on.</p>
 
       <div class="archive-grid">
 
-        <!-- BRMachine Operational Tracker -->
-        <article class="archive-card">
-          <div class="archive-folder" aria-hidden="true">
+        <article class="archive-card reveal">
+          <div class="archive-icon" aria-hidden="true">
+            <!-- Settings / operations icon -->
             <svg viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"/>
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
             </svg>
           </div>
           <h3 class="archive-card-title">BRMachine Operational Tracker</h3>
@@ -152,6 +135,7 @@
             <span class="tag">Inventory</span>
             <span class="tag">Decision Logic</span>
           </div>
+          <a href="projects/brmachine.html" class="archive-read-more">Read more &rarr;</a>
         </article>
 
       </div>
@@ -161,18 +145,14 @@
 
   <footer class="footer-pro">
     <div class="container footer-pro-inner">
-
       <div class="footer-pro-grid">
-        <!-- Get in touch -->
-        <div class="footer-block">
+        <div class="footer-block reveal">
           <div class="footer-kicker">Get in touch</div>
           <div class="footer-text">
             <div class="footer-muted">Christchurch, New Zealand</div>
           </div>
         </div>
-
-        <!-- Connect -->
-        <div class="footer-block">
+        <div class="footer-block reveal">
           <div class="footer-kicker">Connect</div>
           <div class="footer-social">
             <a href="mailto:luanlaguna7@gmail.com" aria-label="Email">
@@ -186,18 +166,14 @@
             </a>
           </div>
         </div>
-
-        <!-- CTA -->
-        <div class="footer-cta">
+        <div class="footer-cta reveal">
           <a class="footer-cta-btn" href="contact.html">Start a conversation</a>
         </div>
       </div>
-
       <div class="footer-bottom">
         <div class="footer-copy">&copy; 2026 Luan Laguna. All rights reserved.</div>
         <div class="footer-tagline">Systems, data, and operations&mdash;built with clarity.</div>
       </div>
-
     </div>
   </footer>
 
@@ -205,29 +181,31 @@
 
   <script>
     (function () {
-      const btn = document.querySelector(".nav-toggle");
-      const nav = document.querySelector("#site-nav");
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.querySelector('#site-nav');
       if (btn && nav) {
-        btn.addEventListener("click", () => {
-          const isOpen = nav.classList.toggle("is-open");
-          btn.classList.toggle("is-active", isOpen);
-          btn.setAttribute("aria-expanded", String(isOpen));
+        btn.addEventListener('click', function () {
+          var isOpen = nav.classList.toggle('is-open');
+          btn.classList.toggle('is-active', isOpen);
+          btn.setAttribute('aria-expanded', String(isOpen));
         });
-        nav.addEventListener("click", (e) => {
-          if (e.target.tagName === "A" && nav.classList.contains("is-open")) {
-            nav.classList.remove("is-open");
-            btn.classList.remove("is-active");
-            btn.setAttribute("aria-expanded", "false");
+        nav.addEventListener('click', function (e) {
+          if (e.target.tagName === 'A' && nav.classList.contains('is-open')) {
+            nav.classList.remove('is-open');
+            btn.classList.remove('is-active');
+            btn.setAttribute('aria-expanded', 'false');
           }
         });
       }
-      const toTop = document.querySelector(".back-to-top");
-      if (!toTop) return;
-      const toggleToTop = () => { toTop.classList.toggle("is-visible", window.scrollY > 260); };
-      window.addEventListener("scroll", toggleToTop, { passive: true });
-      toTop.addEventListener("click", () => { window.scrollTo({ top: 0, behavior: "smooth" }); });
-      toggleToTop();
+      var toTop = document.querySelector('.back-to-top');
+      if (toTop) {
+        var toggleTop = function () { toTop.classList.toggle('is-visible', window.scrollY > 260); };
+        window.addEventListener('scroll', toggleTop, { passive: true });
+        toTop.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+        toggleTop();
+      }
     })();
   </script>
+  <script src="js/animations.js"></script>
 </body>
 </html>

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-GKTQG36YTF"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -19,9 +18,7 @@
     <div class="container nav-inner">
       <a class="brand" href="../index.html">Luan Laguna</a>
       <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
-        <span class="nav-toggle-bar"></span>
-        <span class="nav-toggle-bar"></span>
-        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span>
       </button>
       <nav id="site-nav" class="links" aria-label="Primary">
         <a href="../index.html">Home</a>
@@ -34,184 +31,147 @@
 
   <main class="container page projects-page">
 
-    <!-- Hero: back arrow + centred title -->
     <header class="detail-hero">
-      <a href="../projects.html" class="detail-back">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
-        Back to Projects
-      </a>
-      <p class="featured-card-kicker" style="margin: 0 0 10px;">AI &middot; SQL &middot; Developer Tool</p>
-      <h1 class="detail-title">OpsQuery</h1>
-      <p class="detail-sub">AI-powered natural-language-to-SQL assistant &mdash; 2025</p>
+      <div class="detail-hero-nav">
+        <a href="../projects.html" class="detail-back">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+          Back to Projects
+        </a>
+      </div>
+      <div class="detail-title-wrap">
+        <p class="detail-kicker">AI &middot; SQL &middot; Developer Tool &middot; 2025</p>
+        <h1 class="detail-title reveal">OpsQuery</h1>
+        <p class="detail-sub reveal">AI-powered natural-language-to-SQL assistant for Canterbury Dairy Co.</p>
+        <div style="margin-top: 20px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+          <a href="opsquery.html" class="miro-btn" style="pointer-events: none; opacity: .6; cursor: default;">More Info &rarr;</a>
+          <a href="https://github.com/LuanLaguna/opsquery" target="_blank" rel="noopener" class="icon-btn" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.87 10.94c.58.1.79-.25.79-.56v-2.17c-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.27-1.69-1.27-1.69-1.04-.71.08-.69.08-.69 1.15.08 1.76 1.18 1.76 1.18 1.02 1.76 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.3 1.18-3.12-.12-.29-.51-1.45.11-3.03 0 0 .96-.31 3.15 1.19a10.9 10.9 0 0 1 5.73 0c2.19-1.5 3.15-1.19 3.15-1.19.62 1.58.23 2.74.11 3.03.73.82 1.18 1.86 1.18 3.12 0 4.42-2.69 5.39-5.25 5.67.41.35.77 1.04.77 2.1v3.11c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+          </a>
+        </div>
+      </div>
     </header>
 
-    <!-- Wide laptop mockup -->
-    <div class="detail-mockup">
-      <div class="mockup-wrap">
-        <div class="laptop-frame">
-          <div class="laptop-screen laptop-placeholder">
-            <span>OpsQuery</span>
-          </div>
-          <div class="laptop-chin"><div class="laptop-chin-cam"></div></div>
-        </div>
-        <div class="laptop-keyboard"></div>
+    <!-- Main image -->
+    <div class="detail-image-section reveal">
+      <div class="detail-image-main">
+        <div class="detail-image-placeholder">OpsQuery &mdash; screenshot coming soon</div>
       </div>
     </div>
 
     <!-- Text body -->
-    <div class="opsquery-body">
+    <div class="detail-body">
 
       <section class="opsquery-section" style="border-top: none; padding-top: 0;">
         <p class="opsquery-text">
-          An AI-powered natural language to SQL assistant built for Canterbury Dairy Co, a fictional dairy
-          processing company in Canterbury, New Zealand. Non-technical staff — operations managers, quality
-          leads, and logistics coordinators — can ask business questions in plain English and receive instant
-          answers from a live operational database. No SQL knowledge required.
+          An AI-powered natural language to SQL assistant built for Canterbury Dairy Co, a fictional
+          dairy processing company in Canterbury, New Zealand. Non-technical staff — operations
+          managers, quality leads, and logistics coordinators — can ask business questions in plain
+          English and receive instant answers from a live operational database. No SQL knowledge
+          required.
         </p>
       </section>
 
-      <section class="opsquery-section">
+      <section class="opsquery-section reveal">
         <h2 class="opsquery-section-title">How It Works</h2>
         <p class="opsquery-text">
-          OpsQuery was built to solve a real bottleneck in data-driven operations: the dependency on developers
-          or manual reporting to answer routine questions. In dairy processing, decisions about farm performance,
-          milk collection quality, and route efficiency happen daily — and slow data access has a direct cost.
+          OpsQuery was built to solve a real bottleneck in data-driven operations: the dependency on
+          developers or manual reporting to answer routine questions. In dairy processing, decisions
+          about farm performance, milk collection quality, and route efficiency happen daily — and
+          slow data access has a direct cost.
         </p>
         <p class="opsquery-text">
-          The tool takes a plain English question, passes it through an input security validator that blocks
-          injection attempts, sends it to the Claude AI API which generates a PostgreSQL query, validates that
-          the query is SELECT-only, then executes it against a read-only database user and returns the result
-          as an interactive table.
+          The tool takes a plain English question, passes it through an input security validator that
+          blocks injection attempts, sends it to the Claude AI API which generates a PostgreSQL query,
+          validates that the query is SELECT-only, then executes it against a read-only database user
+          and returns the result as an interactive table.
         </p>
-        <blockquote class="opsquery-quote">
-          "Which farms failed quality tests this week?"
-        </blockquote>
+        <blockquote class="opsquery-quote">"Which farms failed quality tests this week?"</blockquote>
         <p class="opsquery-text">
-          This separation of concerns — security layer, AI layer, database layer — mirrors how production data
-          systems are designed in industry.
+          This separation of concerns — security layer, AI layer, database layer — mirrors how
+          production data systems are designed in industry.
         </p>
       </section>
 
-      <section class="opsquery-section">
+      <section class="opsquery-section reveal">
         <h2 class="opsquery-section-title">Security</h2>
         <p class="opsquery-text">
-          Security was designed into the system from the start, not added later. Input validation blocks 15+
-          SQL keywords before the question reaches the AI. Generated queries are checked to confirm they are
-          SELECT-only. A dedicated read-only PostgreSQL user ensures the AI cannot modify or delete data.
-          Credentials are stored in environment variables and excluded from version control.
+          Security was designed into the system from the start, not added later. Input validation
+          blocks 15+ SQL keywords before the question reaches the AI. Generated queries are checked
+          to confirm they are SELECT-only. A dedicated read-only PostgreSQL user ensures the AI
+          cannot modify or delete data. Credentials are stored in environment variables and excluded
+          from version control.
         </p>
       </section>
 
-      <section class="opsquery-section">
+      <section class="opsquery-section reveal">
         <h2 class="opsquery-section-title">Tech Stack</h2>
         <div class="opsquery-stack">
-          <div class="stack-row">
-            <span class="stack-label">Database</span>
-            <span class="stack-value">PostgreSQL 18</span>
-          </div>
-          <div class="stack-row">
-            <span class="stack-label">AI / NLP</span>
-            <span class="stack-value">Anthropic Claude API (claude-sonnet-4)</span>
-          </div>
-          <div class="stack-row">
-            <span class="stack-label">Interface</span>
-            <span class="stack-value">Streamlit</span>
-          </div>
-          <div class="stack-row">
-            <span class="stack-label">Language</span>
-            <span class="stack-value">Python 3.14</span>
-          </div>
-          <div class="stack-row">
-            <span class="stack-label">DB Connector</span>
-            <span class="stack-value">psycopg2</span>
-          </div>
+          <div class="stack-row"><span class="stack-label">Database</span><span class="stack-value">PostgreSQL 18</span></div>
+          <div class="stack-row"><span class="stack-label">AI / NLP</span><span class="stack-value">Anthropic Claude API (claude-sonnet-4)</span></div>
+          <div class="stack-row"><span class="stack-label">Interface</span><span class="stack-value">Streamlit</span></div>
+          <div class="stack-row"><span class="stack-label">Language</span><span class="stack-value">Python 3.14</span></div>
+          <div class="stack-row"><span class="stack-label">DB Connector</span><span class="stack-value">psycopg2</span></div>
         </div>
       </section>
 
-      <section class="opsquery-section">
+      <section class="opsquery-section reveal">
         <h2 class="opsquery-section-title">Academic Context</h2>
         <p class="opsquery-text">
-          Built as part of the Master of Business Informatics (Business Analytics) programme at Yoobee College
-          of Creative Innovation, Christchurch, New Zealand.
+          Built as part of the Master of Business Informatics (Business Analytics) programme at
+          Yoobee College of Creative Innovation, Christchurch, New Zealand.
         </p>
       </section>
 
-      <div style="padding-top: 10px;">
-        <a href="https://github.com/LuanLaguna/opsquery" target="_blank" rel="noopener" class="miro-btn">
-          View on GitHub &rarr;
-        </a>
+      <!-- Visual asset placeholders -->
+      <div class="asset-placeholders reveal">
+        <h2 class="asset-placeholder-title">Visual Assets</h2>
+        <div class="asset-placeholder-grid">
+          <div class="asset-placeholder">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            OpsQuery Logo<br><span style="font-weight: 400; font-size: .82rem;">coming soon</span>
+          </div>
+          <div class="asset-placeholder">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="6" height="6" rx="1"/><rect x="15" y="3" width="6" height="6" rx="1"/><rect x="9" y="15" width="6" height="6" rx="1"/><path d="M6 9v3a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3V9"/><line x1="12" y1="12" x2="12" y2="15"/></svg>
+            System Workflow Diagram<br><span style="font-weight: 400; font-size: .82rem;">coming soon</span>
+          </div>
+          <div class="asset-placeholder">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Live Demo GIF<br><span style="font-weight: 400; font-size: .82rem;">coming soon</span>
+          </div>
+        </div>
       </div>
 
     </div>
-
   </main>
 
   <footer class="footer-pro">
     <div class="container footer-pro-inner">
-
       <div class="footer-pro-grid">
         <div class="footer-block">
           <div class="footer-kicker">Get in touch</div>
-          <div class="footer-text">
-            <div class="footer-muted">Christchurch, New Zealand</div>
-          </div>
+          <div class="footer-text"><div class="footer-muted">Christchurch, New Zealand</div></div>
         </div>
-
         <div class="footer-block">
           <div class="footer-kicker">Connect</div>
           <div class="footer-social">
-            <a href="mailto:luanlaguna7@gmail.com" aria-label="Email">
-              <svg viewBox="0 0 24 24" class="social-icon"><path d="M3 5h18v14H3V5zm9 6L5 6.5V18h14V6.5L12 11z"/></svg>
-            </a>
-            <a href="https://www.linkedin.com/in/luan-laguna-390032174/" target="_blank" rel="noopener" aria-label="LinkedIn">
-              <svg viewBox="0 0 24 24" class="social-icon"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.11 1 2.49 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4zM8 8h3.8v2.2h.05c.53-1 1.83-2.2 3.77-2.2 4.03 0 4.78 2.65 4.78 6.1V24h-4v-7.4c0-1.77-.03-4.05-2.47-4.05-2.47 0-2.85 1.93-2.85 3.92V24H8z"/></svg>
-            </a>
-            <a href="https://github.com/LuanLaguna" target="_blank" rel="noopener" aria-label="GitHub">
-              <svg viewBox="0 0 24 24" class="social-icon"><path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.87 10.94c.58.1.79-.25.79-.56v-2.17c-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.27-1.69-1.27-1.69-1.04-.71.08-.69.08-.69 1.15.08 1.76 1.18 1.76 1.18 1.02 1.76 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.3 1.18-3.12-.12-.29-.51-1.45.11-3.03 0 0 .96-.31 3.15 1.19a10.9 10.9 0 0 1 5.73 0c2.19-1.5 3.15-1.19 3.15-1.19.62 1.58.23 2.74.11 3.03.73.82 1.18 1.86 1.18 3.12 0 4.42-2.69 5.39-5.25 5.67.41.35.77 1.04.77 2.1v3.11c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
-            </a>
+            <a href="mailto:luanlaguna7@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" class="social-icon"><path d="M3 5h18v14H3V5zm9 6L5 6.5V18h14V6.5L12 11z"/></svg></a>
+            <a href="https://www.linkedin.com/in/luan-laguna-390032174/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" class="social-icon"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.11 1 2.49 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4zM8 8h3.8v2.2h.05c.53-1 1.83-2.2 3.77-2.2 4.03 0 4.78 2.65 4.78 6.1V24h-4v-7.4c0-1.77-.03-4.05-2.47-4.05-2.47 0-2.85 1.93-2.85 3.92V24H8z"/></svg></a>
+            <a href="https://github.com/LuanLaguna" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" class="social-icon"><path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.87 10.94c.58.1.79-.25.79-.56v-2.17c-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.27-1.69-1.27-1.69-1.04-.71.08-.69.08-.69 1.15.08 1.76 1.18 1.76 1.18 1.02 1.76 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.3 1.18-3.12-.12-.29-.51-1.45.11-3.03 0 0 .96-.31 3.15 1.19a10.9 10.9 0 0 1 5.73 0c2.19-1.5 3.15-1.19 3.15-1.19.62 1.58.23 2.74.11 3.03.73.82 1.18 1.86 1.18 3.12 0 4.42-2.69 5.39-5.25 5.67.41.35.77 1.04.77 2.1v3.11c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg></a>
           </div>
         </div>
-
-        <div class="footer-cta">
-          <a class="footer-cta-btn" href="../contact.html">Start a conversation</a>
-        </div>
+        <div class="footer-cta"><a class="footer-cta-btn" href="../contact.html">Start a conversation</a></div>
       </div>
-
       <div class="footer-bottom">
         <div class="footer-copy">&copy; 2026 Luan Laguna. All rights reserved.</div>
         <div class="footer-tagline">Systems, data, and operations&mdash;built with clarity.</div>
       </div>
-
     </div>
   </footer>
 
   <button class="back-to-top" type="button" aria-label="Back to top">&#8593;</button>
-
   <script>
-    (function () {
-      const btn = document.querySelector(".nav-toggle");
-      const nav = document.querySelector("#site-nav");
-      if (btn && nav) {
-        btn.addEventListener("click", () => {
-          const isOpen = nav.classList.toggle("is-open");
-          btn.classList.toggle("is-active", isOpen);
-          btn.setAttribute("aria-expanded", String(isOpen));
-        });
-        nav.addEventListener("click", (e) => {
-          if (e.target.tagName === "A" && nav.classList.contains("is-open")) {
-            nav.classList.remove("is-open");
-            btn.classList.remove("is-active");
-            btn.setAttribute("aria-expanded", "false");
-          }
-        });
-      }
-      const toTop = document.querySelector(".back-to-top");
-      if (!toTop) return;
-      const toggleToTop = () => { toTop.classList.toggle("is-visible", window.scrollY > 260); };
-      window.addEventListener("scroll", toggleToTop, { passive: true });
-      toTop.addEventListener("click", () => { window.scrollTo({ top: 0, behavior: "smooth" }); });
-      toggleToTop();
-    })();
+    (function(){var b=document.querySelector('.nav-toggle'),n=document.querySelector('#site-nav');if(b&&n){b.addEventListener('click',function(){var o=n.classList.toggle('is-open');b.classList.toggle('is-active',o);b.setAttribute('aria-expanded',String(o));});n.addEventListener('click',function(e){if(e.target.tagName==='A'&&n.classList.contains('is-open')){n.classList.remove('is-open');b.classList.remove('is-active');b.setAttribute('aria-expanded','false');}});}var t=document.querySelector('.back-to-top');if(t){var f=function(){t.classList.toggle('is-visible',window.scrollY>260);};window.addEventListener('scroll',f,{passive:true});t.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});f();}})();
   </script>
+  <script src="../js/animations.js"></script>
 </body>
 </html>
