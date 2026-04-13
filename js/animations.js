@@ -49,7 +49,7 @@
     var canvas = document.getElementById('particle-canvas');
     if (canvas) {
       var ctx = canvas.getContext('2d');
-      var COUNT = 60;
+      var COUNT = 90;
       var MAX_DIST = 120;
       var particles = [];
       var rafId;
@@ -62,10 +62,10 @@
           particles.push({
             x: Math.random() * canvas.width,
             y: Math.random() * canvas.height,
-            r: 1.5 + Math.random() * 1,
-            vx: (Math.random() - 0.5) * 0.4,
-            vy: (Math.random() - 0.5) * 0.4,
-            opacity: 0.15 + Math.random() * 0.1
+            r: 2 + Math.random() * 2,
+            vx: (Math.random() - 0.5) * 0.6,
+            vy: (Math.random() - 0.5) * 0.6,
+            opacity: 0.3 + Math.random() * 0.15
           });
         }
       }
@@ -80,7 +80,7 @@
             var dy   = particles[i].y - particles[j].y;
             var dist = Math.sqrt(dx * dx + dy * dy);
             if (dist < MAX_DIST) {
-              ctx.strokeStyle = 'rgba(15,23,42,' + (0.07 * (1 - dist / MAX_DIST)) + ')';
+              ctx.strokeStyle = 'rgba(15,23,42,' + (0.2 * (1 - dist / MAX_DIST)) + ')';
               ctx.lineWidth = 0.6;
               ctx.beginPath();
               ctx.moveTo(particles[i].x, particles[i].y);
