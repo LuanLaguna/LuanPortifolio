@@ -50,111 +50,70 @@
 
       <section class="opsquery-section" style="border-top: none; padding-top: 0;">
         <p class="opsquery-text">
-          A web-based restaurant ordering and management system designed to eliminate the operational
-          bottlenecks that occur during peak service hours. The system replaces manual order-taking
-          with a digital platform supporting online ordering, QR-code-based menus, real-time order
-          tracking, and digital payment processing.
+          An end-to-end information systems analysis and design project for a web-based restaurant ordering and management platform. The work spans the full Systems Development Life Cycle — from problem identification and requirements analysis through object-oriented design — producing a suite of professional UML artefacts ready to guide software implementation.
         </p>
       </section>
 
       <section class="opsquery-section reveal">
         <h2 class="opsquery-section-title">The Problem</h2>
         <p class="opsquery-text">
-          During peak hours, restaurants face a structural information problem: orders, payments, and
-          preparation status are managed manually, making it difficult to coordinate activities when
-          demand is highest. Customers queue to place orders, staff manage multiple tasks
-          simultaneously, and errors increase under pressure.
-        </p>
-        <p class="opsquery-text">
-          This system was designed to address these bottlenecks by creating a structured, real-time
-          information flow between customers, kitchen staff, and management.
+          During peak service hours, restaurants face a structural information failure: orders, payments, and preparation status are managed manually, creating coordination breakdowns when demand is highest. Customers queue, staff manage competing tasks simultaneously, and order errors increase. The system was designed to replace this with a structured, real-time information flow between customers, kitchen staff, and management.
         </p>
       </section>
 
       <section class="opsquery-section reveal">
-        <h2 class="opsquery-section-title">How It Works</h2>
+        <h2 class="opsquery-section-title">Analysis (Assessment 1)</h2>
         <p class="opsquery-text">
-          The system was designed using the full Systems Development Life Cycle (SDLC). The analysis
-          phase identified seven key business events — including order placement, payment processing,
-          payment failure recovery, loyalty point redemption, pre-order scheduling, order status
-          updates, and low-stock alerts — each mapped to a system response using Event Decomposition
-          Technique.
+          Seven business events were identified and decomposed using Event Decomposition Technique, each mapped to a system response. Two UML use case diagrams were produced — one for Customer Ordering and Payment, one for Staff and Restaurant Operations. Activity diagrams, system sequence diagrams, a domain model class diagram, and a full entity relationship diagram were developed, establishing the data structure and system boundary.
+        </p>
+      </section>
+
+      <section class="opsquery-section reveal">
+        <h2 class="opsquery-section-title">Design (Assessment 2)</h2>
+        <p class="opsquery-text">
+          CRC card analysis assigned class responsibilities across five domain classes: Customer, Order, OrderItem, MenuItem, and Staff. Design-level sequence diagrams were produced for both use cases — Place Online Order and Make Payment — using UML 2.0 notation including loop fragments, alt fragments, and break fragments to model retry behaviour and alternative flows.
         </p>
         <p class="opsquery-text">
-          Use case analysis produced UML diagrams for two subsystems: Customer Ordering and Payment,
-          and Staff and Restaurant Operations. These were supported by detailed activity diagrams,
-          system sequence diagrams, and design-level sequence diagrams modelling the complete
-          interactions between six classes: Customer, Restaurant Ordering System, Order, MenuItem,
-          OrderItem, and Staff.
-        </p>
-        <p class="opsquery-text">
-          The design phase produced CRC cards assigning class responsibilities, a full design class
-          diagram with methods derived from sequence diagram analysis, and a domain model updated
-          with attributes identified through the design process.
+          A unified design class diagram extended the domain model with methods derived directly from sequence diagram analysis. A PaymentGateway class was introduced to establish a clear system boundary with external financial services — meaning a change in payment provider would only require updating the Payment-to-Gateway interaction, leaving the rest of the system unchanged.
         </p>
       </section>
 
       <section class="opsquery-section reveal">
         <h2 class="opsquery-section-title">Key Design Decisions</h2>
         <p class="opsquery-text">
-          The Restaurant Ordering System was modelled as a GRASP Controller — a design pattern that
-          keeps domain classes focused on their own responsibilities by centralising workflow
-          coordination. This reduces coupling between classes and improves maintainability.
-        </p>
-        <p class="opsquery-text">
-          Payment processing was separated from order management as a distinct class, with a further
-          separation between the internal Payment class and the external Payment Gateway. This means
-          a change in payment provider would only affect the boundary between these two classes,
-          leaving the rest of the system unchanged.
-        </p>
-        <p class="opsquery-text">
-          A retry loop was built into the payment flow to handle declined transactions gracefully,
-          and atomic transaction management was specified to ensure that a partial system failure
-          cannot leave an order marked unpaid while a payment is recorded as approved.
+          The Restaurant Ordering System was modelled as a GRASP Controller — centralising workflow coordination so domain classes remain focused on their own data and behaviour. Payment processing was separated from order management, with the external payment gateway modelled as a distinct class. Atomic transaction management was specified for the payment flow to prevent data inconsistency from partial failures. A retry loop handles declined transactions without breaking the user experience.
         </p>
       </section>
 
       <section class="opsquery-section reveal">
         <h2 class="opsquery-section-title">Risk Analysis</h2>
         <p class="opsquery-text">
-          Two critical risk areas were identified: scalability and data integrity. During peak
-          periods, concurrent order placements can create bottlenecks. The modular design — where
-          Order, Payment, and MenuItem operate independently with clearly defined responsibilities
-          — supports future deployment on cloud infrastructure with auto-scaling.
-        </p>
-        <p class="opsquery-text">
-          Database constraints including primary keys, foreign keys, and enumerated status values
-          prevent invalid state transitions and protect data consistency.
+          Concurrent order placement during peak periods was identified as a scalability risk. The modular class design supports future deployment on auto-scaling cloud infrastructure. Database constraints — primary keys, foreign keys, and enumerated status values — prevent invalid state transitions. The isAvailable attribute on MenuItem addresses inventory race conditions under concurrent load.
         </p>
       </section>
 
       <section class="opsquery-section reveal">
         <h2 class="opsquery-section-title">Cultural Context</h2>
         <p class="opsquery-text">
-          The system was designed with reference to Te Ao Māori principles. Manaakitanga — care,
-          respect, and hospitality — informed the core purpose of reducing wait times and improving
-          the customer experience. Whanaungatanga — relationships and belonging — is reflected in the
-          loyalty points feature, which rewards returning customers and fosters an ongoing connection
-          between the restaurant and its community.
+          The system design drew on Te Ao Māori principles. Manaakitanga informed the core purpose of reducing wait times and improving the customer experience. Whanaungatanga is reflected in the loyalty points feature, which rewards returning customers and builds an ongoing relationship between the restaurant and its community.
         </p>
       </section>
 
       <section class="opsquery-section reveal">
-        <h2 class="opsquery-section-title">Tech Stack</h2>
+        <h2 class="opsquery-section-title">Technical Methodology</h2>
         <div class="opsquery-stack">
-          <div class="stack-row"><span class="stack-label">Modelling</span><span class="stack-value">UML — Use Case, Activity, Sequence, Class Diagrams</span></div>
-          <div class="stack-row"><span class="stack-label">Analysis</span><span class="stack-value">Event Decomposition Technique · CRC Cards · Domain Modelling</span></div>
-          <div class="stack-row"><span class="stack-label">Design</span><span class="stack-value">GRASP Patterns · ERD · Design Class Diagrams</span></div>
-          <div class="stack-row"><span class="stack-label">Methodology</span><span class="stack-value">SDLC — full lifecycle from analysis through design</span></div>
+          <div class="stack-row"><span class="stack-label">Modelling</span><span class="stack-value">UML — Use Case, Activity, Sequence, Design Class Diagrams</span></div>
+          <div class="stack-row"><span class="stack-label">Analysis</span><span class="stack-value">Event Decomposition · CRC Cards · Domain Modelling · ERD</span></div>
+          <div class="stack-row"><span class="stack-label">Design</span><span class="stack-value">GRASP Controller Pattern · Atomic Transaction Design · System Boundary Modelling</span></div>
+          <div class="stack-row"><span class="stack-label">Methodology</span><span class="stack-value">SDLC — full lifecycle from analysis through object-oriented design</span></div>
         </div>
       </section>
 
       <section class="opsquery-section reveal">
         <h2 class="opsquery-section-title">Academic Context</h2>
         <p class="opsquery-text">
-          Completed as part of MBI801: Information Systems Analysis and Design, Master of Business
-          Informatics (Business Analytics), Yoobee College of Creative Innovation, Christchurch,
-          New Zealand, 2026. Group project with Yixiao Wang, Harsh Sharma, and Arjun Vaja.
+          Completed across two assessments as part of MBI801: Information Systems Analysis and Design, Master of Business Informatics (Business Analytics), Yoobee College of Creative Innovation, Christchurch, New Zealand, 2026.<br>
+          Group project — Luan Laguna, Yixiao Wang, Harsh Sharma, Arjun Vaja.
         </p>
       </section>
 
@@ -164,7 +123,7 @@
   <footer class="footer-pro">
     <div class="container footer-pro-inner">
       <div class="footer-pro-grid">
-        <div class="footer-block"><div class="footer-kicker">Get in touch</div><div class="footer-text"><div class="footer-muted">Christchurch, New Zealand</div></div></div>
+        <div class="footer-block"><div class="footer-kicker">BASED IN</div><div class="footer-text"><div class="footer-muted">Christchurch, New Zealand</div></div></div>
         <div class="footer-block">
           <div class="footer-kicker">Connect</div>
           <div class="footer-social">

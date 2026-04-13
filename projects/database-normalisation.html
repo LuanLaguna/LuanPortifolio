@@ -36,8 +36,7 @@
       <div class="detail-title-wrap">
         <p class="detail-kicker">Database Design &middot; ERD &middot; SQL &middot; 2025</p>
         <h1 class="detail-title reveal">Database Normalisation</h1>
-        <p class="detail-sub reveal">Relational data architecture case study — full content coming soon.</p>
-        <p class="detail-sub reveal" style="margin-top: 6px; font-size: .88rem;">GitHub repository not available — academic design project.</p>
+        <p class="detail-sub reveal">College Management System</p>
       </div>
     </header>
 
@@ -51,53 +50,45 @@
 
       <section class="opsquery-section" style="border-top: none; padding-top: 0;">
         <p class="opsquery-text">
-          A relational database design project applying formal normalisation theory to a real
-          operational scenario. The work demonstrates how a poorly structured data model can be
-          systematically transformed into a clean, efficient relational schema — eliminating
-          redundancy and protecting data integrity at every stage.
-        </p>
-        <p class="opsquery-text">
-          Full project documentation is currently being prepared for this page. In the meantime,
-          the key stages and methods used in the project are outlined below.
+          A critical review and redesign of a flawed college management database schema, applying normalisation theory and relational database design principles to produce a schema that is consistent, scalable, and free from data integrity risks.
         </p>
       </section>
 
       <section class="opsquery-section reveal">
-        <h2 class="opsquery-section-title">Approach</h2>
+        <h2 class="opsquery-section-title">The Problem</h2>
         <p class="opsquery-text">
-          The project began with conceptual modelling through Enhanced Entity-Relationship (EER)
-          diagrams, where entities, attributes, and relationships were identified and structured to
-          accurately represent the real-world system being modelled. These conceptual models were
-          then translated into relational schemas.
-        </p>
-        <p class="opsquery-text">
-          The normalisation process moved through each normal form systematically: identifying
-          functional dependencies, resolving partial dependencies to reach Second Normal Form, and
-          eliminating transitive dependencies to reach Third Normal Form. The result is a schema
-          where each attribute is stored exactly once and every relationship is expressed cleanly
-          through keys and foreign key constraints.
+          The original schema contained five categories of design failure. Department data was stored as plain text in three separate tables — Students, Courses, and Instructors — creating a transitive dependency that violated Third Normal Form (3NF). Two tables lacked primary keys entirely, allowing duplicate records to exist without detection. No foreign key constraints were defined anywhere in the schema, meaning the database could not enforce referential integrity. The classroom table was designed to support only one course per room, which does not reflect how physical spaces are used operationally. The system log table referenced a user identifier linked to no existing table, making the audit trail effectively unreliable.
         </p>
       </section>
 
       <section class="opsquery-section reveal">
-        <h2 class="opsquery-section-title">Tech Stack</h2>
+        <h2 class="opsquery-section-title">The Approach</h2>
+        <p class="opsquery-text">
+          Each flaw was addressed systematically. A dedicated Department table was introduced to resolve the 3NF violation — replacing the text column in three tables with a foreign key reference to a single source of truth. Surrogate primary keys were added to the Enrollments and Teaches tables, renamed using noun convention to enrollment and teaching_assignment. Foreign key constraints were introduced across all related tables. The Classrooms table was restructured to remove the single-course limitation, linking rooms to the teaching_assignment table instead. The system_log table was redesigned to reference the enrollment table, with role and user_name attributes added to support a reliable and auditable activity trail.
+        </p>
+      </section>
+
+      <section class="opsquery-section reveal">
+        <h2 class="opsquery-section-title">Outcome</h2>
+        <p class="opsquery-text">
+          The redesigned schema was implemented in MySQL Workbench and validated across eight tables within the college_db database. The result is a normalised, integrity-enforced relational structure that eliminates update anomalies, prevents orphan records, and scales cleanly as the institution grows.
+        </p>
+      </section>
+
+      <section class="opsquery-section reveal">
+        <h2 class="opsquery-section-title">Technical Methodology</h2>
         <div class="opsquery-stack">
-          <div class="stack-row"><span class="stack-label">Modelling</span><span class="stack-value">Enhanced Entity-Relationship (EER) Diagrams</span></div>
-          <div class="stack-row"><span class="stack-label">Schema Design</span><span class="stack-value">Relational Schema · Functional Dependency Analysis</span></div>
-          <div class="stack-row"><span class="stack-label">Normalisation</span><span class="stack-value">1NF · 2NF · 3NF</span></div>
-          <div class="stack-row"><span class="stack-label">Database</span><span class="stack-value">PostgreSQL · SQL</span></div>
-          <div class="stack-row"><span class="stack-label">Tools</span><span class="stack-value">ERD Diagrams · Data Modelling</span></div>
+          <div class="stack-row"><span class="stack-label">Analysis</span><span class="stack-value">3NF Violation Identification · Referential Integrity Audit · Schema Error Classification</span></div>
+          <div class="stack-row"><span class="stack-label">Design</span><span class="stack-value">Entity Relationship Diagram (Chen Notation) · Normalisation to 3NF · Foreign Key Constraint Mapping</span></div>
+          <div class="stack-row"><span class="stack-label">Implementation</span><span class="stack-value">MySQL · MySQL Workbench · SQL DDL</span></div>
+          <div class="stack-row"><span class="stack-label">Methodology</span><span class="stack-value">Database Systems: Connolly & Begg (2015)</span></div>
         </div>
       </section>
 
       <section class="opsquery-section reveal">
         <h2 class="opsquery-section-title">Academic Context</h2>
         <p class="opsquery-text">
-          Completed as part of the Master of Business Informatics (Business Analytics) programme
-          at Yoobee College of Creative Innovation, Christchurch, New Zealand, 2025.
-        </p>
-        <p class="opsquery-text" style="margin-top: 12px; font-style: italic; color: var(--muted);">
-          Full written content for this page is coming soon.
+          Completed as part of MBI802: Database Management Systems, Master of Business Informatics (Business Analytics), Yoobee College of Creative Innovation, Christchurch, New Zealand, 2026.
         </p>
       </section>
 
@@ -107,7 +98,7 @@
   <footer class="footer-pro">
     <div class="container footer-pro-inner">
       <div class="footer-pro-grid">
-        <div class="footer-block"><div class="footer-kicker">Get in touch</div><div class="footer-text"><div class="footer-muted">Christchurch, New Zealand</div></div></div>
+        <div class="footer-block"><div class="footer-kicker">BASED IN</div><div class="footer-text"><div class="footer-muted">Christchurch, New Zealand</div></div></div>
         <div class="footer-block">
           <div class="footer-kicker">Connect</div>
           <div class="footer-social">
