@@ -166,7 +166,7 @@
           letters.forEach(function(letter, index) {
               setTimeout(function() {
                   letter.classList.add("show");
-              }, 100 + (index * 150));
+              }, 100 + (index * 300));
           });
           
           setTimeout(function() {
@@ -174,8 +174,8 @@
               setTimeout(function() {
                   overlay.remove();
                   document.body.style.overflow = ""; 
-              }, 500); 
-          }, 1600);
+              }, 800); 
+          }, 2700);
           
           sessionStorage.setItem("introPlayed", "true");
       }
