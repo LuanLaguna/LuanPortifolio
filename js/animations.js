@@ -138,4 +138,47 @@
     });
   }
 
+  /* ─────────────────────────────────────────────────
+     ANIMATION 4 — INTRO LOADING
+  ───────────────────────────────────────────────── */
+  document.addEventListener("DOMContentLoaded", function() {
+      if (!sessionStorage.getItem("introPlayed")) {
+          var overlay = document.createElement("div");
+          overlay.id = "intro-overlay";
+          
+          var container = document.createElement("div");
+          container.className = "intro-text-container";
+          
+          var name = "LUAN";
+          name.split("").forEach(function(char) {
+              var span = document.createElement("span");
+              span.className = "intro-letter";
+              span.textContent = char;
+              container.appendChild(span);
+          });
+          
+          overlay.appendChild(container);
+          document.body.appendChild(overlay);
+          
+          document.body.style.overflow = "hidden";
+          
+          var letters = container.querySelectorAll(".intro-letter");
+          letters.forEach(function(letter, index) {
+              setTimeout(function() {
+                  letter.classList.add("show");
+              }, 100 + (index * 150));
+          });
+          
+          setTimeout(function() {
+              overlay.classList.add("hidden");
+              setTimeout(function() {
+                  overlay.remove();
+                  document.body.style.overflow = ""; 
+              }, 500); 
+          }, 1600);
+          
+          sessionStorage.setItem("introPlayed", "true");
+      }
+  });
+
 })();

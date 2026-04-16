@@ -2316,4 +2316,119 @@ body.page-exit{
   .detail-image-grid{ grid-template-columns: 1fr; }
 }
 
+/* --- PART 1: Projects Images --- */
+.proj-img-wrap, .archive-icon.proj-img-wrap {
+  overflow: hidden;
+  border-radius: 8px;
+}
+.detail-image-main {
+  overflow: hidden;
+}
+.proj-img-wrap img,
+.detail-image-main img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+.proj-img-wrap img {
+  aspect-ratio: 16/9;
+}
+.detail-image-main img {
+  border-radius: 8px;
+}
 
+/* --- PART 2: Footer Icons & Tooltips --- */
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.footer-social > a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+/* existing icons */
+.footer-social > a > svg {
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+/* new icons */
+.g-icon, .in-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+}
+.footer-social > a:hover .g-icon,
+.footer-social > a:hover .in-icon {
+  transform: scale(1.1);
+}
+.footer-social > a:hover .in-icon {
+  filter: brightness(1.15);
+}
+
+/* Tooltips */
+.tooltip-wrap::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+  background: #1a1f3c; /* dark pill */
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 10;
+}
+.tooltip-wrap:hover::before {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-4px);
+}
+
+/* --- PART 3: Intro Animation --- */
+#intro-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f4f6f8; /* matches site background */
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease;
+}
+
+#intro-overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.intro-text-container {
+  display: flex;
+  overflow: hidden;
+}
+
+.intro-letter {
+  font-family: inherit; /* same as site */
+  font-size: 5rem;
+  color: #1a1f3c; /* site primary dark navy */
+  letter-spacing: 0.3em;
+  font-weight: 700;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.intro-letter.show {
+  opacity: 1;
+  transform: translateY(0);
+}
