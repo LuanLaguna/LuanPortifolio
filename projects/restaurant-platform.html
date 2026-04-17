@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-GKTQG36YTF"></script>
@@ -62,19 +62,25 @@
       </section>
 
       <section class="opsquery-section reveal">
-        <h2 class="opsquery-section-title">Analysis (Assessment 1)</h2>
+        <h2 class="opsquery-section-title">Requirements Analysis</h2>
         <p class="opsquery-text">
-          Seven business events were identified and decomposed using Event Decomposition Technique, each mapped to a system response. Two UML use case diagrams were produced — one for Customer Ordering and Payment, one for Staff and Restaurant Operations. Activity diagrams, system sequence diagrams, a domain model class diagram, and a full entity relationship diagram were developed, establishing the data structure and system boundary.
+          Seven operational events were mapped to define how the system should respond under real service conditions — from a customer placing an order through to a payment failure recovery and low-stock notification. This structured the scope of the system before a single line of design work began.
+        </p>
+        <p class="opsquery-text">
+          Two use case models documented the distinct responsibilities of customers and staff, supported by activity diagrams and system sequence diagrams that traced how information flows between actors and the platform during critical transactions. A domain model and entity relationship diagram established the data structure underpinning the entire system.
         </p>
       </section>
 
       <section class="opsquery-section reveal">
-        <h2 class="opsquery-section-title">Design (Assessment 2)</h2>
+        <h2 class="opsquery-section-title">System Design</h2>
         <p class="opsquery-text">
-          CRC card analysis assigned class responsibilities across five domain classes: Customer, Order, OrderItem, MenuItem, and Staff. Design-level sequence diagrams were produced for both use cases — Place Online Order and Make Payment — using UML 2.0 notation including loop fragments, alt fragments, and break fragments to model retry behaviour and alternative flows.
+          Class responsibilities were assigned across five core entities — Customer, Order, OrderItem, MenuItem, and Staff — ensuring each part of the system owns its own data and behaviour. This reduces the risk of changes in one area breaking functionality in another.
         </p>
         <p class="opsquery-text">
-          A unified design class diagram extended the domain model with methods derived directly from sequence diagram analysis. A PaymentGateway class was introduced to establish a clear system boundary with external financial services — meaning a change in payment provider would only require updating the Payment-to-Gateway interaction, leaving the rest of the system unchanged.
+          Detailed interaction diagrams modelled the full lifecycle of two key business processes: placing an order and processing a payment. The payment flow was designed to handle declined transactions gracefully, looping back to retry without disrupting the customer experience.
+        </p>
+        <p class="opsquery-text">
+          A dedicated boundary was drawn between the internal system and the external payment provider. This means switching payment processors in future would require updating only one interaction point — not rebuilding the whole payment module.
         </p>
       </section>
 
