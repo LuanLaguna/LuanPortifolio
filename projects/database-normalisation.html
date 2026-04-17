@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-GKTQG36YTF"></script>
@@ -50,7 +50,7 @@
 
       <section class="opsquery-section" style="border-top: none; padding-top: 0;">
         <p class="opsquery-text">
-          A critical review and redesign of a flawed college management database schema, applying normalisation theory and relational database design principles to produce a schema that is consistent, scalable, and free from data integrity risks.
+          Given a broken database, I identified five categories of design failure and rebuilt the schema from first principles — applying normalisation theory, referential integrity constraints, and structural redesign to produce a database that is consistent, scalable, and audit-ready.
         </p>
       </section>
 
@@ -60,6 +60,62 @@
           The original schema contained five categories of design failure. Department data was stored as plain text in three separate tables — Students, Courses, and Instructors — creating a transitive dependency that violated Third Normal Form (3NF). Two tables lacked primary keys entirely, allowing duplicate records to exist without detection. No foreign key constraints were defined anywhere in the schema, meaning the database could not enforce referential integrity. The classroom table was designed to support only one course per room, which does not reflect how physical spaces are used operationally. The system log table referenced a user identifier linked to no existing table, making the audit trail effectively unreliable.
         </p>
       </section>
+
+      <div class="reveal" style="margin-bottom: 3rem;">
+        <p style="font-size:0.8rem;color:#888;font-style:italic;margin-bottom:12px;">
+          Schema error analysis — identified and resolved
+        </p>
+        <div style="border-radius:10px;overflow:hidden;border:0.5px solid #e5e7eb;">
+          <table style="width:100%;border-collapse:collapse;font-size:13px;">
+            <thead>
+              <tr style="background:#1a2f4a;">
+                <th style="color:#fff;font-weight:600;padding:12px 16px;text-align:left;width:60px">Code</th>
+                <th style="color:#fff;font-weight:600;padding:12px 16px;text-align:left;width:180px">Table(s)</th>
+                <th style="color:#fff;font-weight:600;padding:12px 16px;text-align:left;">Issue</th>
+                <th style="color:#fff;font-weight:600;padding:12px 16px;text-align:left;width:130px">Principle</th>
+                <th style="color:#fff;font-weight:600;padding:12px 16px;text-align:left;">Fix Applied</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding:12px 16px;border-bottom:0.5px solid #e5e7eb;"><span style="background:#e8f4f8;color:#1a2f4a;font-weight:700;font-size:11px;padding:2px 8px;border-radius:4px;font-family:monospace;">E1</span></td>
+                <td style="padding:12px 16px;border-bottom:0.5px solid #e5e7eb;font-size:12px;">Students, Courses, Instructors</td>
+                <td style="padding:12px 16px;border-bottom:0.5px solid #e5e7eb;font-size:12px;">department stored as plain text in three tables — transitive dependency</td>
+                <td style="padding:12px 16px;border-bottom:0.5px solid #e5e7eb;"><span style="background:#fff2cc;color:#412402;font-size:11px;padding:2px 8px;border-radius:4px;">3NF Violation</span></td>
+                <td style="padding:12px 16px;border-bottom:0.5px solid #e5e7eb;font-size:12px;">Dedicated Department table introduced</td>
+              </tr>
+              <tr style="background:#f8f9fc;">
+                <td style="padding:12px 16px;border-bottom:0.5px solid #e5e7eb;"><span style="background:#e8f4f8;color:#1a2f4a;font-weight:700;font-size:11px;padding:2px 8px;border-radius:4px;font-family:monospace;">E2</span></td>
+                <td style="padding:12px 16px;border-bottom:0.5px solid #e5e7eb;font-size:12px;">Enrollments, Teaches, Classrooms</td>
+                <td style="padding:12px 16px;border-bottom:0.5px solid #e5e7eb;font-size:12px;">No Primary Keys — duplicate records undetectable</td>
+                <td style="padding:12px 16px;border-bottom:0.5px solid #e5e7eb;"><span style="background:#fff2cc;color:#412402;font-size:11px;padding:2px 8px;border-radius:4px;">Data Integrity</span></td>
+                <td style="padding:12px 16px;border-bottom:0.5px solid #e5e7eb;font-size:12px;">Surrogate Primary Keys added</td>
+              </tr>
+              <tr>
+                <td style="padding:12px 16px;border-bottom:0.5px solid #e5e7eb;"><span style="background:#e8f4f8;color:#1a2f4a;font-weight:700;font-size:11px;padding:2px 8px;border-radius:4px;font-family:monospace;">E3</span></td>
+                <td style="padding:12px 16px;border-bottom:0.5px solid #e5e7eb;font-size:12px;">Enrollments, Teaches</td>
+                <td style="padding:12px 16px;border-bottom:0.5px solid #e5e7eb;font-size:12px;">No Foreign Key constraints — orphan records possible across all tables</td>
+                <td style="padding:12px 16px;border-bottom:0.5px solid #e5e7eb;"><span style="background:#fff2cc;color:#412402;font-size:11px;padding:2px 8px;border-radius:4px;">Referential Integrity</span></td>
+                <td style="padding:12px 16px;border-bottom:0.5px solid #e5e7eb;font-size:12px;">FK references added across all tables</td>
+              </tr>
+              <tr style="background:#f8f9fc;">
+                <td style="padding:12px 16px;border-bottom:0.5px solid #e5e7eb;"><span style="background:#e8f4f8;color:#1a2f4a;font-weight:700;font-size:11px;padding:2px 8px;border-radius:4px;font-family:monospace;">E4</span></td>
+                <td style="padding:12px 16px;border-bottom:0.5px solid #e5e7eb;font-size:12px;">Classrooms</td>
+                <td style="padding:12px 16px;border-bottom:0.5px solid #e5e7eb;font-size:12px;">assigned_course restricts each room to one course only</td>
+                <td style="padding:12px 16px;border-bottom:0.5px solid #e5e7eb;"><span style="background:#fff2cc;color:#412402;font-size:11px;padding:2px 8px;border-radius:4px;">Design Flaw</span></td>
+                <td style="padding:12px 16px;border-bottom:0.5px solid #e5e7eb;font-size:12px;">Column removed — linked to teaching_assignment</td>
+              </tr>
+              <tr>
+                <td style="padding:12px 16px;"><span style="background:#e8f4f8;color:#1a2f4a;font-weight:700;font-size:11px;padding:2px 8px;border-radius:4px;font-family:monospace;">E5</span></td>
+                <td style="padding:12px 16px;font-size:12px;">System_Log</td>
+                <td style="padding:12px 16px;font-size:12px;">user_id references no existing table — audit trail unreliable</td>
+                <td style="padding:12px 16px;"><span style="background:#fff2cc;color:#412402;font-size:11px;padding:2px 8px;border-radius:4px;">Referential Integrity</span></td>
+                <td style="padding:12px 16px;font-size:12px;">Replaced with enrollment_id, user_name, role</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
 
       <section class="opsquery-section reveal">
         <h2 class="opsquery-section-title">The Approach</h2>
@@ -74,6 +130,8 @@
           The redesigned schema was implemented in MySQL Workbench and validated across eight tables within the college_db database. The result is a normalised, integrity-enforced relational structure that eliminates update anomalies, prevents orphan records, and scales cleanly as the institution grows.
         </p>
       </section>
+
+      <img src="../assets/projects/er_diagram.png" alt="ER Diagram" style="display: block; width: 100%; max-width: 780px; margin: 32px auto; border-radius: 8px; border: 1px solid #e5e7eb;" class="reveal" />
 
       <section class="opsquery-section reveal">
         <h2 class="opsquery-section-title">Technical Methodology</h2>

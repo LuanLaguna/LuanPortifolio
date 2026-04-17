@@ -1,0 +1,64 @@
+<style>
+.db-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.db-table th { background: #1a2f4a; color: #ffffff; font-weight: 600; padding: 12px 16px; text-align: left; }
+.db-table td { padding: 12px 16px; border-bottom: 0.5px solid var(--color-border-tertiary); color: var(--color-text-primary); vertical-align: top; }
+.db-table tr:nth-child(even) td { background: var(--color-background-secondary); }
+.db-table tr:hover td { background: var(--color-background-tertiary); }
+.code-pill { display: inline-block; background: #e8f4f8; color: #1a2f4a; font-weight: 700; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-family: monospace; }
+.fix-pill { display: inline-block; background: #e1f5ee; color: #085041; font-size: 11px; padding: 2px 8px; border-radius: 4px; }
+.principle-pill { display: inline-block; background: #fff2cc; color: #412402; font-size: 11px; padding: 2px 8px; border-radius: 4px; }
+.caption { font-size: 12px; color: var(--color-text-secondary); font-style: italic; margin-bottom: 12px; }
+.wrapper { border-radius: 10px; overflow: hidden; border: 0.5px solid var(--color-border-tertiary); }
+</style>
+
+<p class="caption">Schema error analysis — identified and resolved</p>
+<div class="wrapper">
+<table class="db-table">
+  <thead>
+    <tr>
+      <th style="width:60px">Code</th>
+      <th style="width:200px">Table(s)</th>
+      <th>Issue</th>
+      <th style="width:140px">Principle</th>
+      <th>Fix Applied</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span class="code-pill">E1</span></td>
+      <td>Students, Courses, Instructors</td>
+      <td>department stored as plain text in three tables — transitive dependency on primary key</td>
+      <td><span class="principle-pill">3NF Violation</span></td>
+      <td><span class="fix-pill">Dedicated Department table introduced</span></td>
+    </tr>
+    <tr>
+      <td><span class="code-pill">E2</span></td>
+      <td>Enrollments, Teaches, Classrooms</td>
+      <td>No Primary Keys defined — duplicate records undetectable</td>
+      <td><span class="principle-pill">Data Integrity</span></td>
+      <td><span class="fix-pill">Surrogate Primary Keys added</span></td>
+    </tr>
+    <tr>
+      <td><span class="code-pill">E3</span></td>
+      <td>Enrollments, Teaches</td>
+      <td>No Foreign Key constraints anywhere — orphan records possible across all tables</td>
+      <td><span class="principle-pill">Referential Integrity</span></td>
+      <td><span class="fix-pill">FK references added across all tables</span></td>
+    </tr>
+    <tr>
+      <td><span class="code-pill">E4</span></td>
+      <td>Classrooms</td>
+      <td>assigned_course has no FK and restricts each room to a single course only</td>
+      <td><span class="principle-pill">Design Flaw</span></td>
+      <td><span class="fix-pill">Column removed — linked to teaching_assignment</span></td>
+    </tr>
+    <tr>
+      <td><span class="code-pill">E5</span></td>
+      <td>System_Log</td>
+      <td>user_id references no existing table — audit trail unreliable</td>
+      <td><span class="principle-pill">Referential Integrity</span></td>
+      <td><span class="fix-pill">Replaced with enrollment_id, user_name, role</span></td>
+    </tr>
+  </tbody>
+</table>
+</div>
